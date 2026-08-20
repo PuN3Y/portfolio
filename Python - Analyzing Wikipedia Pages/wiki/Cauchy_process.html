@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-feature-navigation-update-disabled vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Cauchy process - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-feature-navigation-update-disabled vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"1dfc6c2f-acbf-4943-87f4-c6aed7795a2d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Cauchy_process","wgTitle":"Cauchy process","wgCurRevisionId":1355329741,"wgRevisionId":1355329741,"wgArticleId":38454328,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description matches Wikidata","CS1 maint: multiple names: authors list","Lévy processes"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Cauchy_process","wgRelevantArticleId":38454328,"wgTempUserName":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"status":{"levels":1}},"namespaces":[0,4]},"wgConfirmEditCaptchaNeededForGenericEdit":"hcaptcha","wgConfirmEditForceShowCaptcha":false,"wgConfirmEditHCaptchaSiteKey":"5d0c670e-a5f4-4258-ad16-1f42792c9c62","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgMediaViewerMobileBeta":false,"wgPopupsFlags":0,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":6000,"wgParsoidHtmlVersion":"2.8.0","parsermigration-parsoid":true,"wgPageAssessments":{"Mathematics":{"class":"Start","importance":"Low"},"Project-independent assessment":{"class":"Start","importance":""},"Statistics":{"class":"Start","importance":"High"}},"wgTestKitchenUserExperiments":{"overrides":[],"enrolled":[],"assigned":[],"subject_ids":[]},"wgEditSubmitButtonLabelPublish":true,"wgVisualEditorPageIsDisambiguation":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgULSLanguageSelectorV2Enabled":true,"wgWikibaseItemId":"Q5054342","wgCheckUserClientHintsHeadersJsApi":["brands","architecture","bitness","fullVersionList","mobile","model","platform","platformVersion"],"wgPersonalDashboardMenuVisible":false};
+RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.wikimediamessages.styles":"ready","ext.math.styles":"ready","ext.cite.parsoid.styles":"ready","ext.cite.styles":"ready","mediawiki.skinning.content.parsoid":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","jquery.makeCollapsible.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.math.polyfills","ext.cite.ux-enhancements","mediawiki.page.media","site","mediawiki.page.ready","jquery.makeCollapsible","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","ext.testKitchen","mmv.bootstrap","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","wikibase.databox.fromWikidata","ext.checkUser.clientHints","ext.quicksurveys.init"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.parsoid.styles%7Cext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cjquery.makeCollapsible.styles%7Cmediawiki.skinning.content.parsoid%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.47.0-wmf.15">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="Cauchy process - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Cauchy_process&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/rest.php/v1/search" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Cauchy_process">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="auth.wikimedia.org">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Cauchy_process rootpage-Cauchy_process skin-vector-2022 action-view">
+<div id="mw-aria-live-region" class="mw-aria-live-region" aria-live="polite"></div><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header no-font-mode-scale">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  title="Main menu" >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"   >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin" aria-label="Move Main menu to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin" aria-label="Hide Main menu">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li><li id="n-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/enwiki-25.svg" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg" style="width: 8.75em; height: 1.375em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en-25.svg" width="140" height="11" style="width: 8.75em; height: 0.6875em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search cdx-button__icon"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input mw-searchInput" autocomplete="off"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="none" spellcheck="false" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"   >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikipedia.org&amp;uselang=en" data-mw-donate-attempt="top_link" class=""><span>Donate</span></a>
+</li>
+<li id="pt-createaccount-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Cauchy+process" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Cauchy+process" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out vector-user-links-dropdown--collapsible"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"   >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-userAvatar mw-ui-icon-wikimedia-userAvatar cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikipedia.org&amp;uselang=en" data-mw-donate-attempt="top_link" class=""><span class="vector-icon mw-ui-icon-heart mw-ui-icon-wikimedia-heart cdx-button__icon"></span>
+
+<span>Donate</span></a>
+</li>
+<li id="pt-createaccount" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Cauchy+process" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span class="vector-icon mw-ui-icon-userAvatar mw-ui-icon-wikimedia-userAvatar cdx-button__icon"></span>
+
+<span>Create account</span></a>
+</li>
+<li id="pt-login" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Cauchy+process" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn cdx-button__icon"></span>
+
+<span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	data-pinned-container-id="vector-toc-pinned-container"
+	data-unpinned-container-id="vector-toc-unpinned-container"
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin" aria-label="Move Contents to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin" aria-label="Hide Contents">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-Symmetric_Cauchy_process"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Symmetric_Cauchy_process">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">1</span>
+				<span>Symmetric Cauchy process</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Symmetric_Cauchy_process-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Asymmetric_Cauchy_process"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Asymmetric_Cauchy_process">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">2</span>
+				<span>Asymmetric Cauchy process</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Asymmetric_Cauchy_process-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">3</span>
+				<span>References</span>
+			</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar no-font-mode-scale">
+					<nav aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  title="Table of Contents" >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"   >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span lang="en" dir="ltr"><span class="mw-page-title-main">Cauchy process</span></span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector"  aria-label="3 languages" aria-description="Go to an article in another language. Available in 3 languages"  >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-3" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">3 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-ca mw-list-item"><a href="https://ca.wikipedia.org/wiki/Proc%C3%A9s_de_Cauchy" title="Procés de Cauchy – Catalan" lang="ca" hreflang="ca" data-title="Procés de Cauchy" data-language-autonym="Català" data-language-local-name="Catalan" class="interlanguage-link-target"><span>Català</span></a></li><li class="interlanguage-link interwiki-fa mw-list-item"><a href="https://fa.wikipedia.org/wiki/%D9%81%D8%B1%D8%A7%DB%8C%D9%86%D8%AF_%DA%A9%D9%88%D8%B4%DB%8C" title="فرایند کوشی – Persian" lang="fa" hreflang="fa" data-title="فرایند کوشی" data-language-autonym="فارسی" data-language-local-name="Persian" class="interlanguage-link-target"><span>فارسی</span></a></li><li class="interlanguage-link interwiki-pt mw-list-item"><a href="https://pt.wikipedia.org/wiki/Processo_de_Cauchy" title="Processo de Cauchy – Portuguese" lang="pt" hreflang="pt" data-title="Processo de Cauchy" data-language-autonym="Português" data-language-local-name="Portuguese" class="interlanguage-link-target"><span>Português</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q5054342#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-nstab-main" class="selected mw-list-item vector-tab-noicon"><a data-mw-interface  href="/wiki/Cauchy_process" title="View the content page [c]" accesskey="c" class=""><span>Article</span></a>
+</li>
+<li id="ca-talk" class="mw-list-item vector-tab-noicon"><a data-mw-interface  href="/wiki/Talk:Cauchy_process" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t" class=""><span>Talk</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"    >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+			    
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view" class="selected mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/wiki/Cauchy_process" class=""><span>Read</span></a>
+</li>
+<li id="ca-edit" class="mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Cauchy_process&amp;action=edit" title="Edit this page [e]" accesskey="e" class=""><span>Edit</span></a>
+</li>
+<li id="ca-history" class="mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Cauchy_process&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span>View history</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+			</nav>
+
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"   >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-verticalEllipsis mw-ui-icon-wikimedia-verticalEllipsis cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin" aria-label="Move Tools to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin" aria-label="Hide Tools">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet"  >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view-more" class="selected mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/wiki/Cauchy_process" class=""><span class="vector-icon mw-ui-icon-eye mw-ui-icon-wikimedia-eye cdx-button__icon"></span>
+
+<span>Read</span></a>
+</li>
+<li id="ca-edit-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Cauchy_process&amp;action=edit" title="Edit this page [e]" accesskey="e" class=""><span class="vector-icon mw-ui-icon-edit mw-ui-icon-wikimedia-edit cdx-button__icon"></span>
+
+<span>Edit</span></a>
+</li>
+<li id="ca-history-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Cauchy_process&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span class="vector-icon mw-ui-icon-history mw-ui-icon-wikimedia-history cdx-button__icon"></span>
+
+<span>View history</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Cauchy_process" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Cauchy_process" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Cauchy_process&amp;oldid=1355329741" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Cauchy_process&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Cauchy_process&amp;id=1355329741&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCauchy_process"><span>Get shortened URL</span></a></li><li class="mw-list-item"><a href="/w/index.php?title=Cauchy_process&amp;useparsoid=0"><span>Switch to legacy parser</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Cauchy_process&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Cauchy_process&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-wikibase" class="wb-otherproject-link wb-otherproject-wikibase-dataitem mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q5054342" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end no-font-mode-scale">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin" aria-label="Move Appearance to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin" aria-label="Hide Appearance">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-subjectpageheader">
+</div><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr" data-mw-parsoid-version="0.24.0.0-alpha18" data-mw-html-version="2.8.0"><section data-mw-section-id="0" id="mwAQ"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none" about="#mwt1" typeof="mw:Transclusion" id="mwAg" data-mw='{"parts":[{"template":{"target":{"wt":"Short description","href":"./Template:Short_description"},"params":{"1":{"wt":"Type of stochastic process in probability"}},"i":0}}]}'>Type of stochastic process in probability</div><span class="mw-empty-elt" about="#mwt1"><link rel="mw:PageProp/Category" href="./Category:Articles_with_short_description"/><link rel="mw:PageProp/Category" href="./Category:Short_description_matches_Wikidata"/></span>
+<p id="mwAw">In <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Probability" title="Probability" id="mwBA">probability</a> theory, a <b id="mwBQ">Cauchy process</b> is a type of <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stochastic_process" title="Stochastic process" id="mwBg">stochastic process</a>.  There are <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Symmetric" title="Symmetric" class="mw-redirect" id="mwBw">symmetric</a> and <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Asymmetry" title="Asymmetry" id="mwCA">asymmetric</a> forms of the Cauchy process.<sup about="#mwt4" class="mw-ref reference" id="cite_ref-models_1-0" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"models"},"body":{"id":"mw-reference-text-cite_note-models-1"}}'><a href="#cite_note-models-1" id="mwCQ"><span class="mw-reflink-text" id="mwCg"><span class="cite-bracket" id="mwCw">[</span>1<span class="cite-bracket" id="mwDA">]</span></span></a></sup>   The unspecified  term "Cauchy process" is often used to refer to the symmetric Cauchy process.<sup about="#mwt8" class="mw-ref reference" id="cite_ref-stable_2-0" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"stable"},"body":{"id":"mw-reference-text-cite_note-stable-2"}}'><a href="#cite_note-stable-2" id="mwDQ"><span class="mw-reflink-text" id="mwDg"><span class="cite-bracket" id="mwDw">[</span>2<span class="cite-bracket" id="mwEA">]</span></span></a></sup></p>
+
+<p id="mwEQ">The Cauchy process has a number of properties:</p>
+
+<ol id="mwEg"><li id="mwEw">It is a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Lévy_process" title="Lévy process" id="mwFA">Lévy process</a><sup about="#mwt11" class="mw-ref reference" id="cite_ref-Winkel_3-0" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"Winkel"},"body":{"id":"mw-reference-text-cite_note-Winkel-3"}}'><a href="#cite_note-Winkel-3" id="mwFQ"><span class="mw-reflink-text" id="mwFg"><span class="cite-bracket" id="mwFw">[</span>3<span class="cite-bracket" id="mwGA">]</span></span></a></sup><sup about="#mwt14" class="mw-ref reference" id="cite_ref-4" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{},"body":{"id":"mw-reference-text-cite_note-4"}}'><a href="#cite_note-4" id="mwGQ"><span class="mw-reflink-text" id="mwGg"><span class="cite-bracket" id="mwGw">[</span>4<span class="cite-bracket" id="mwHA">]</span></span></a></sup><sup about="#mwt17" class="mw-ref reference" id="cite_ref-5" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{},"body":{"id":"mw-reference-text-cite_note-5"}}'><a href="#cite_note-5" id="mwHQ"><span class="mw-reflink-text" id="mwHg"><span class="cite-bracket" id="mwHw">[</span>5<span class="cite-bracket" id="mwIA">]</span></span></a></sup></li>
+<li id="mwIQ">It is a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stable_process" title="Stable process" id="mwIg">stable process</a><sup about="#mwt18" class="mw-ref reference" id="cite_ref-models_1-1" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"models"}}'><a href="#cite_note-models-1" id="mwIw"><span class="mw-reflink-text" id="mwJA"><span class="cite-bracket" id="mwJQ">[</span>1<span class="cite-bracket" id="mwJg">]</span></span></a></sup><sup about="#mwt19" class="mw-ref reference" id="cite_ref-stable_2-1" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"stable"}}'><a href="#cite_note-stable-2" id="mwJw"><span class="mw-reflink-text" id="mwKA"><span class="cite-bracket" id="mwKQ">[</span>2<span class="cite-bracket" id="mwKg">]</span></span></a></sup></li>
+<li id="mwKw">It is a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Pure_jump_process" title="Pure jump process" class="mw-redirect" id="mwLA">pure jump process</a><sup about="#mwt22" class="mw-ref reference" id="cite_ref-6" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{},"body":{"id":"mw-reference-text-cite_note-6"}}'><a href="#cite_note-6" id="mwLQ"><span class="mw-reflink-text" id="mwLg"><span class="cite-bracket" id="mwLw">[</span>6<span class="cite-bracket" id="mwMA">]</span></span></a></sup></li>
+<li id="mwMQ">Its <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Moment_(mathematics)" title="Moment (mathematics)" id="mwMg">moments</a> are <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Infinity" title="Infinity" id="mwMw">infinite</a>.</li></ol>
+
+</section><section data-mw-section-id="1" id="mwNA" aria-labelledby="Symmetric_Cauchy_process"><div class="mw-heading mw-heading2"><h2 id="Symmetric_Cauchy_process">Symmetric Cauchy process</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cauchy_process&amp;action=edit&amp;section=1" title="Edit section: Symmetric Cauchy process"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<figure class="mw-default-size" typeof="mw:File/Thumb" id="mwNQ"><a href="https://en.wikipedia.org/wiki/File:CauchyProcess.png" class="mw-file-description" id="mwNg"><img resource="https://en.wikipedia.org/wiki/File:CauchyProcess.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/CauchyProcess.png/250px-CauchyProcess.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" data-file-width="1651" data-file-height="1160" data-file-type="bitmap" height="176" width="250" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/CauchyProcess.png/500px-CauchyProcess.png?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" class="mw-file-element" id="mwNw"/></a><figcaption id="mwOA"></figcaption></figure>
+<p id="mwOQ">The symmetric Cauchy process can be described by a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Brownian_motion" title="Brownian motion" id="mwOg">Brownian motion</a> or <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Wiener_process" title="Wiener process" id="mwOw">Wiener process</a> subject to a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Lévy_distribution" title="Lévy distribution" id="mwPA">Lévy</a> <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Subordinator_(mathematics)" title="Subordinator (mathematics)" id="mwPQ">subordinator</a>.<sup about="#mwt25" class="mw-ref reference" id="cite_ref-applebaum_7-0" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"applebaum"},"body":{"id":"mw-reference-text-cite_note-applebaum-7"}}'><a href="#cite_note-applebaum-7" id="mwPg"><span class="mw-reflink-text" id="mwPw"><span class="cite-bracket" id="mwQA">[</span>7<span class="cite-bracket" id="mwQQ">]</span></span></a></sup>  The Lévy subordinator is a process associated with a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Lévy_distribution" title="Lévy distribution" id="mwQg">Lévy distribution</a> having location parameter of <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt26" id="mwQw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"0"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle 0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:1.162ex; height:2.176ex;" alt="{\displaystyle 0}"/></span> and a scale parameter of <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt27" id="mwRA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"t^2/2"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle t^{2}/2}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>2</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle t^{2}/2}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/004c0aca59838905e619f2eab6f8283d9df0e8a3" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:4.219ex; height:3.176ex;" alt="{\displaystyle t^{2}/2}"/></span>.<sup about="#mwt28" class="mw-ref reference" id="cite_ref-applebaum_7-1" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"applebaum"}}'><a href="#cite_note-applebaum-7" id="mwRQ"><span class="mw-reflink-text" id="mwRg"><span class="cite-bracket" id="mwRw">[</span>7<span class="cite-bracket" id="mwSA">]</span></span></a></sup>  The Lévy distribution is a special case of the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Inverse-gamma_distribution" title="Inverse-gamma distribution" id="mwSQ">inverse-gamma distribution</a>.  So, using <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt29" id="mwSg" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"C"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle C}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>C</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle C}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4fc55753007cd3c18576f7933f6f089196732029" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:1.766ex; height:2.176ex;" alt="{\displaystyle C}"/></span> to represent the Cauchy process and <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt30" id="mwSw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"L"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle L}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>L</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle L}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/103168b86f781fe6e9a4a87b8ea1cebe0ad4ede8" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:1.583ex; height:2.176ex;" alt="{\displaystyle L}"/></span> to represent the Lévy subordinator, the symmetric Cauchy process can be described as:</p>
+
+<dl id="mwTA"><dd id="mwTQ"><span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt31" id="mwTg" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\n C(t; 0, 1) \\;:=\\;W(L(t; 0, t^2/2)).\n"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle C(t;0,1)\;:=\;W(L(t;0,t^{2}/2)).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>C</mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo>;</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mspace width="thickmathspace"></mspace>
+        <mo>:=</mo>
+        <mspace width="thickmathspace"></mspace>
+        <mi>W</mi>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo>;</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <msup>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>2</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle C(t;0,1)\;:=\;W(L(t;0,t^{2}/2)).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89587e221b4c450a2bb6c474e3ff44b92e9612cd" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:30.416ex; height:3.176ex;" alt="{\displaystyle C(t;0,1)\;:=\;W(L(t;0,t^{2}/2)).}"/></span></dd></dl>
+
+<p id="mwTw">The Lévy distribution is the probability of the first hitting time for a Brownian motion, and thus the Cauchy process is essentially the result of two <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Independence_(probability_theory)" title="Independence (probability theory)" id="mwUA">independent</a> Brownian motion processes.<sup about="#mwt32" class="mw-ref reference" id="cite_ref-applebaum_7-2" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"applebaum"}}'><a href="#cite_note-applebaum-7" id="mwUQ"><span class="mw-reflink-text" id="mwUg"><span class="cite-bracket" id="mwUw">[</span>7<span class="cite-bracket" id="mwVA">]</span></span></a></sup></p>
+
+<p id="mwVQ">The  <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Lévy_process#Lévy–Khintchine_representation" title="Lévy process" id="mwVg">Lévy–Khintchine representation</a> for the symmetric Cauchy process is a triplet with zero drift and zero diffusion, giving a Lévy–Khintchine triplet of <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt33" id="mwVw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"(0,0, W)"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle (0,0,W)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <mi>W</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (0,0,W)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c936e042841be30e5ed5989c589eaac736357d6e" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:8.637ex; height:2.843ex;" alt="{\displaystyle (0,0,W)}"/></span>, where <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt34" id="mwWA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"W(dx) = dx / (\\pi x^2)"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle W(dx)=dx/(\pi x^{2})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>W</mi>
+        <mo stretchy="false">(</mo>
+        <mi>d</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>d</mi>
+        <mi>x</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mi>π<!-- π --></mi>
+        <msup>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle W(dx)=dx/(\pi x^{2})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c707bc7383354026cd8a35e0f8706476f5173a5a" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:19.122ex; height:3.176ex;" alt="{\displaystyle W(dx)=dx/(\pi x^{2})}"/></span>.<sup about="#mwt35" class="mw-ref reference" id="cite_ref-cinlar_8-0" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"cinlar"}}'><a href="#cite_note-cinlar-8" id="mwWQ"><span class="mw-reflink-text" id="mwWg"><span class="cite-bracket" id="mwWw">[</span>8<span class="cite-bracket" id="mwXA">]</span></span></a></sup></p>
+
+<p id="mwXQ">The marginal <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)" title="Characteristic function (probability theory)" id="mwXg">characteristic function</a> of the symmetric Cauchy process has the form:<sup about="#mwt36" class="mw-ref reference" id="cite_ref-models_1-2" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"models"}}'><a href="#cite_note-models-1" id="mwXw"><span class="mw-reflink-text" id="mwYA"><span class="cite-bracket" id="mwYQ">[</span>1<span class="cite-bracket" id="mwYg">]</span></span></a></sup><sup about="#mwt37" class="mw-ref reference" id="cite_ref-cinlar_8-1" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"cinlar"}}'><a href="#cite_note-cinlar-8" id="mwYw"><span class="mw-reflink-text" id="mwZA"><span class="cite-bracket" id="mwZQ">[</span>8<span class="cite-bracket" id="mwZg">]</span></span></a></sup></p>
+<dl id="mwZw"><dd id="mwaA"><span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt38" id="mwaQ" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\operatorname{E}\\Big[e^{i\\theta X_t} \\Big] =  e^{-t |\\theta |}. "}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle \operatorname {E} {\Big [}e^{i\theta X_{t}}{\Big ]}=e^{-t|\theta |}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">E</mi>
+        <mo>⁡<!-- ⁡ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">[</mo>
+          </mrow>
+        </mrow>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>θ<!-- θ --></mi>
+            <msub>
+              <mi>X</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>t</mi>
+              </mrow>
+            </msub>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">]</mo>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>−<!-- − --></mo>
+            <mi>t</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi>θ<!-- θ --></mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+          </mrow>
+        </msup>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {E} {\Big [}e^{i\theta X_{t}}{\Big ]}=e^{-t|\theta |}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d8cbd54f35159559645600415ec5852b783b2353" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -1.838ex; width:17.445ex; height:4.843ex;" alt="{\displaystyle \operatorname {E} {\Big [}e^{i\theta X_{t}}{\Big ]}=e^{-t|\theta |}.}"/></span></dd></dl>
+
+<p id="mwag">The marginal <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Probability_distribution" title="Probability distribution" id="mwaw">probability distribution</a> of the  symmetric Cauchy process is the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Cauchy_distribution" title="Cauchy distribution" id="mwbA">Cauchy distribution</a> whose density is<sup about="#mwt41" class="mw-ref reference" id="cite_ref-cinlar_8-2" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"cinlar"},"body":{"id":"mw-reference-text-cite_note-cinlar-8"}}'><a href="#cite_note-cinlar-8" id="mwbQ"><span class="mw-reflink-text" id="mwbg"><span class="cite-bracket" id="mwbw">[</span>8<span class="cite-bracket" id="mwcA">]</span></span></a></sup><sup about="#mwt44" class="mw-ref reference" id="cite_ref-essentials_9-0" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"essentials"},"body":{"id":"mw-reference-text-cite_note-essentials-9"}}'><a href="#cite_note-essentials-9" id="mwcQ"><span class="mw-reflink-text" id="mwcg"><span class="cite-bracket" id="mwcw">[</span>9<span class="cite-bracket" id="mwdA">]</span></span></a></sup></p>
+<dl id="mwdQ"><dd id="mwdg"><span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt45" id="mwdw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"f(x; t) = { 1 \\over \\pi } \\left[ { t \\over x^2 + t^2  } \\right]. "}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle f(x;t)={1 \over \pi }\left[{t \over x^{2}+t^{2}}\right].}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>;</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mi>π<!-- π --></mi>
+          </mfrac>
+        </mrow>
+        <mrow>
+          <mo>[</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mi>t</mi>
+              <mrow>
+                <msup>
+                  <mi>x</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <msup>
+                  <mi>t</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+              </mrow>
+            </mfrac>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x;t)={1 \over \pi }\left[{t \over x^{2}+t^{2}}\right].}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/33f3f4481cd6c44c4348a891fb2252bdbfccf439" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -2.505ex; width:23.388ex; height:6.176ex;" alt="{\displaystyle f(x;t)={1 \over \pi }\left[{t \over x^{2}+t^{2}}\right].}"/></span></dd></dl>
+
+</section><section data-mw-section-id="2" id="mweA" aria-labelledby="Asymmetric_Cauchy_process"><div class="mw-heading mw-heading2"><h2 id="Asymmetric_Cauchy_process">Asymmetric Cauchy process</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cauchy_process&amp;action=edit&amp;section=2" title="Edit section: Asymmetric Cauchy process"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p id="mweQ">The asymmetric Cauchy process is defined in terms of a parameter <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt46" id="mweg" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\beta"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle \beta }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>β<!-- β --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;" alt="{\displaystyle \beta }"/></span>. Here
+<span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt47" id="mwew" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\beta"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle \beta }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>β<!-- β --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;" alt="{\displaystyle \beta }"/></span> is the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Skewness" title="Skewness" id="mwfA">skewness</a> parameter, and its <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Absolute_value" title="Absolute value" id="mwfQ">absolute value</a> must be less than or equal to 1.<sup about="#mwt48" class="mw-ref reference" id="cite_ref-models_1-3" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"models"}}'><a href="#cite_note-models-1" id="mwfg"><span class="mw-reflink-text" id="mwfw"><span class="cite-bracket" id="mwgA">[</span>1<span class="cite-bracket" id="mwgQ">]</span></span></a></sup>  In the case where <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt49" id="mwgg" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"|\\beta|=1"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle |\beta |=1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>β<!-- β --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |\beta |=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7baf636f6cfd68e84b27947739b8919f3351ee32" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:6.887ex; height:2.843ex;" alt="{\displaystyle |\beta |=1}"/></span> the process is considered a completely asymmetric Cauchy process.<sup about="#mwt50" class="mw-ref reference" id="cite_ref-models_1-4" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"models"}}'><a href="#cite_note-models-1" id="mwgw"><span class="mw-reflink-text" id="mwhA"><span class="cite-bracket" id="mwhQ">[</span>1<span class="cite-bracket" id="mwhg">]</span></span></a></sup></p>
+
+<p id="mwhw">The Lévy–Khintchine triplet has the form <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt51" id="mwiA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"(0,0, W)"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle (0,0,W)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <mi>W</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (0,0,W)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c936e042841be30e5ed5989c589eaac736357d6e" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:8.637ex; height:2.843ex;" alt="{\displaystyle (0,0,W)}"/></span>, where <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt52" id="mwiQ" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"W(dx) = \\begin{cases} Ax^{-2}\\,dx &amp; \\text{if } x>0 \\\\ Bx^{-2}\\,dx &amp; \\text{if } x&lt;0 \\end{cases} "}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle W(dx)={\begin{cases}Ax^{-2}\,dx&amp;{\text{if }}x>0\\Bx^{-2}\,dx&amp;{\text{if }}x&lt;0\end{cases}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>W</mi>
+        <mo stretchy="false">(</mo>
+        <mi>d</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>{</mo>
+            <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+              <mtr>
+                <mtd>
+                  <mi>A</mi>
+                  <msup>
+                    <mi>x</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mo>−<!-- − --></mo>
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mspace width="thinmathspace"></mspace>
+                  <mi>d</mi>
+                  <mi>x</mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if </mtext>
+                  </mrow>
+                  <mi>x</mi>
+                  <mo>></mo>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>B</mi>
+                  <msup>
+                    <mi>x</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mo>−<!-- − --></mo>
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mspace width="thinmathspace"></mspace>
+                  <mi>d</mi>
+                  <mi>x</mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if </mtext>
+                  </mrow>
+                  <mi>x</mi>
+                  <mo>&lt;</mo>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo fence="true" stretchy="true" symmetric="true"></mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle W(dx)={\begin{cases}Ax^{-2}\,dx&amp;{\text{if }}x>0\\Bx^{-2}\,dx&amp;{\text{if }}x&lt;0\end{cases}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72786806015ebfacb151c2c05111d183c003ff95" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -2.505ex; width:30.595ex; height:6.176ex;" alt="{\displaystyle W(dx)={\begin{cases}Ax^{-2}\,dx&amp;{\text{if }}x>0\\Bx^{-2}\,dx&amp;{\text{if }}x&lt;0\end{cases}}}"/></span>, where <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt53" id="mwig" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"A \\ne B"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle A\neq B}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+        <mo>≠<!-- ≠ --></mo>
+        <mi>B</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A\neq B}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c78362703472ea51edc4614b6b7a7bda8e83131c" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:6.606ex; height:2.676ex;" alt="{\displaystyle A\neq B}"/></span>, <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt54" id="mwiw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"A>0"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle A>0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+        <mo>></mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A>0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/232a94dbd97f2ce670d4987c5ad8ad82b072861b" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:6.004ex; height:2.176ex;" alt="{\displaystyle A>0}"/></span> and <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt55" id="mwjA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"B>0"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle B>0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>B</mi>
+        <mo>></mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle B>0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b567393bbf6974b07d583790802107e2d46963dd" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:6.025ex; height:2.176ex;" alt="{\displaystyle B>0}"/></span>.<sup about="#mwt56" class="mw-ref reference" id="cite_ref-models_1-5" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"models"}}'><a href="#cite_note-models-1" id="mwjQ"><span class="mw-reflink-text" id="mwjg"><span class="cite-bracket" id="mwjw">[</span>1<span class="cite-bracket" id="mwkA">]</span></span></a></sup></p>
+
+<p id="mwkQ">Given this, <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt57" id="mwkg" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\beta"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle \beta }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>β<!-- β --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;" alt="{\displaystyle \beta }"/></span> is a function of <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt58" id="mwkw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"A"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle A}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:1.743ex; height:2.176ex;" alt="{\displaystyle A}"/></span> and <span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt59" id="mwlA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"B"}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle B}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>B</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle B}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:1.764ex; height:2.176ex;" alt="{\displaystyle B}"/></span>.</p>
+
+<p id="mwlQ">The characteristic function of the asymmetric Cauchy distribution has the form:<sup about="#mwt60" class="mw-ref reference" id="cite_ref-models_1-6" rel="dc:references" typeof="mw:Extension/ref" data-mw='{"name":"ref","attrs":{"name":"models"}}'><a href="#cite_note-models-1" id="mwlg"><span class="mw-reflink-text" id="mwlw"><span class="cite-bracket" id="mwmA">[</span>1<span class="cite-bracket" id="mwmQ">]</span></span></a></sup></p>
+<dl id="mwmg"><dd id="mwmw"><span class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt61" id="mwnA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\operatorname{E}\\Big[e^{i\\theta X_t} \\Big] =  e^{-t (|\\theta | + i \\beta \\theta \\ln|\\theta| / (2 \\pi))}. "}}'><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle \operatorname {E} {\Big [}e^{i\theta X_{t}}{\Big ]}=e^{-t(|\theta |+i\beta \theta \ln |\theta |/(2\pi ))}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">E</mi>
+        <mo>⁡<!-- ⁡ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">[</mo>
+          </mrow>
+        </mrow>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>θ<!-- θ --></mi>
+            <msub>
+              <mi>X</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>t</mi>
+              </mrow>
+            </msub>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">]</mo>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>−<!-- − --></mo>
+            <mi>t</mi>
+            <mo stretchy="false">(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi>θ<!-- θ --></mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mo>+</mo>
+            <mi>i</mi>
+            <mi>β<!-- β --></mi>
+            <mi>θ<!-- θ --></mi>
+            <mi>ln</mi>
+            <mo>⁡<!-- ⁡ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi>θ<!-- θ --></mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo>/</mo>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <mn>2</mn>
+            <mi>π<!-- π --></mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </msup>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {E} {\Big [}e^{i\theta X_{t}}{\Big ]}=e^{-t(|\theta |+i\beta \theta \ln |\theta |/(2\pi ))}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3ba01d6f0ede388523c63e8e88b6866ce2525c4c" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -1.838ex; width:29.98ex; height:4.843ex;" alt="{\displaystyle \operatorname {E} {\Big [}e^{i\theta X_{t}}{\Big ]}=e^{-t(|\theta |+i\beta \theta \ln |\theta |/(2\pi ))}.}"/></span></dd></dl>
+
+<p id="mwnQ">The marginal probability distribution of the asymmetric Cauchy process is a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stable_distribution" title="Stable distribution" id="mwng">stable distribution</a> with index of stability (i.e., α parameter) equal to 1.</p>
+
+</section><section data-mw-section-id="3" id="mwnw" aria-labelledby="References"><div class="mw-heading mw-heading2"><h2 id="References">References</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cauchy_process&amp;action=edit&amp;section=3" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<span class="mw-empty-elt" about="#mwt62" typeof="mw:Transclusion" id="mwoA" data-mw='{"parts":[{"template":{"target":{"wt":"reflist","href":"./Template:Reflist"},"params":{},"i":0}}]}'><style data-mw-deduplicate="TemplateStyles:r1327269900" typeof="mw:Extension/templatestyles" about="#mwt63" data-mw='{"name":"templatestyles","attrs":{"src":"Reflist/styles.css"}}'>.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}body.skin-vector-2022 .mw-parser-output .reflist-columns-2{column-width:27em}body.skin-vector-2022 .mw-parser-output .reflist-columns-3{column-width:22.5em}.mw-parser-output .references[data-mw-group=upper-alpha]{list-style-type:upper-alpha}.mw-parser-output .references[data-mw-group=upper-roman]{list-style-type:upper-roman}.mw-parser-output .references[data-mw-group=lower-alpha]{list-style-type:lower-alpha}.mw-parser-output .references[data-mw-group=lower-greek]{list-style-type:lower-greek}.mw-parser-output .references[data-mw-group=lower-roman]{list-style-type:lower-roman}.mw-parser-output div.reflist-liststyle-upper-alpha .references{list-style-type:upper-alpha}.mw-parser-output div.reflist-liststyle-upper-roman .references{list-style-type:upper-roman}.mw-parser-output div.reflist-liststyle-lower-alpha .references{list-style-type:lower-alpha}.mw-parser-output div.reflist-liststyle-lower-greek .references{list-style-type:lower-greek}.mw-parser-output div.reflist-liststyle-lower-roman .references{list-style-type:lower-roman}</style></span><div about="#mwt62" id="mwoQ">
+<div class="mw-references-wrap" typeof="mw:Extension/references" about="#mwt64" id="mwog" data-mw='{"name":"references","attrs":{"group":"","responsive":"1"},"body":{"extsrc":""}}'><ol class="mw-references references" id="mwow"><li about="#cite_note-models-1" id="cite_note-models-1" data-mw-footnote-number="1"><span rel="mw:referencedBy" class="mw-cite-backlink" id="mwpA"><a href="#cite_ref-models_1-0" id="mwpQ"><span class="mw-linkback-text" id="mwpg">1</span></a> <a href="#cite_ref-models_1-1" id="mwpw"><span class="mw-linkback-text" id="mwqA">2</span></a> <a href="#cite_ref-models_1-2" id="mwqQ"><span class="mw-linkback-text" id="mwqg">3</span></a> <a href="#cite_ref-models_1-3" id="mwqw"><span class="mw-linkback-text" id="mwrA">4</span></a> <a href="#cite_ref-models_1-4" id="mwrQ"><span class="mw-linkback-text" id="mwrg">5</span></a> <a href="#cite_ref-models_1-5" id="mwrw"><span class="mw-linkback-text" id="mwsA">6</span></a> <a href="#cite_ref-models_1-6" id="mwsQ"><span class="mw-linkback-text" id="mwsg">7</span></a></span> <span id="mw-reference-text-cite_note-models-1" class="mw-reference-text reference-text"><style data-mw-deduplicate="TemplateStyles:r1333433106" typeof="mw:Extension/templatestyles mw:Transclusion" about="#mwt2" id="mwsw" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite book","href":"./Template:Cite_book"},"params":{"title":{"wt":"Models of Random Processes: A Handbook for Mathematicians and Engineers"},"pages":{"wt":"210–211"},"author":{"wt":"Kovalenko, I.N."},"year":{"wt":"1996"},"publisher":{"wt":"CRC Press"},"isbn":{"wt":"9780849328701"},"display-authors":{"wt":"etal"}},"i":0}}]}'>.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free.id-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited.id-lock-limited a,.mw-parser-output .id-lock-registration.id-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription.id-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-free a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-limited a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-registration a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-subscription a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .cs1-ws-icon a{background-size:contain;padding:0 1em 0 0}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:var(--color-error,#bf3c2c)}.mw-parser-output .cs1-visible-error{color:var(--color-error,#bf3c2c)}.mw-parser-output .cs1-maint{display:none;color:#085;margin-left:0.3em}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}@media screen{.mw-parser-output .cs1-format{font-size:95%}html.skin-theme-clientpref-night .mw-parser-output .cs1-maint{color:#18911f}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .cs1-maint{color:#18911f}}</style><cite id="CITEREFKovalenko,_I.N.1996" class="citation book cs1" about="#mwt2">Kovalenko, I.N.; et<span typeof="mw:Entity" id="mwtA"> </span>al. (1996). <i id="mwtQ">Models of Random Processes: A Handbook for Mathematicians and Engineers</i>. CRC Press. pp.<span typeof="mw:Entity" id="mwtg"> </span><span class="nowrap" id="mwtw">210–</span>211. <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/ISBN_(identifier)" title="ISBN (identifier)" class="mw-redirect" id="mwuA">ISBN</a><span typeof="mw:Entity" id="mwuQ"> </span><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Special:BookSources/9780849328701" title="Special:BookSources/9780849328701" id="mwug"><bdi id="mwuw">9780849328701</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Models+of+Random+Processes%3A+A+Handbook+for+Mathematicians+and+Engineers&amp;rft.pages=210-211&amp;rft.pub=CRC+Press&amp;rft.date=1996&amp;rft.isbn=9780849328701&amp;rft.au=Kovalenko%2C+I.N.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt2" id="mwvA"></span></span></li>
+<li about="#cite_note-stable-2" id="cite_note-stable-2" data-mw-footnote-number="2"><span rel="mw:referencedBy" class="mw-cite-backlink" id="mwvQ"><a href="#cite_ref-stable_2-0" id="mwvg"><span class="mw-linkback-text" id="mwvw">1</span></a> <a href="#cite_ref-stable_2-1" id="mwwA"><span class="mw-linkback-text" id="mwwQ">2</span></a></span> <span id="mw-reference-text-cite_note-stable-2" class="mw-reference-text reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" about="#mwt5" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwwg" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite book","href":"./Template:Cite_book"},"params":{"title":{"wt":"From Stochastic Calculus to Mathematical Finance: The Shiryaev Festschrift"},"url":{"wt":"https://archive.org/details/fromstochasticca00kaba_517"},"url-access":{"wt":"limited"},"editor1":{"wt":"Kabanov, Y."},"editor2":{"wt":"Liptser, R."},"editor3":{"wt":"Stoyanov, J."},"chapter":{"wt":"On Existence and Uniqueness of Reflected Solutions of Stochastic Equations Driven by Symmetric Stable Processes"},"author":{"wt":"Engelbert, H.J., Kurenok, V.P. &amp; Zalinescu, A."},"page":{"wt":"[https://archive.org/details/fromstochasticca00kaba_517/page/n261 228]"},"year":{"wt":"2006"},"publisher":{"wt":"Springer"},"isbn":{"wt":"9783540307884"}},"i":0}}]}'/><cite id="CITEREFEngelbert,_H.J.,_Kurenok,_V.P._&amp;_Zalinescu,_A.2006" class="citation book cs1" about="#mwt5">Engelbert, H.J., Kurenok, V.P. &amp; Zalinescu, A. (2006). "On Existence and Uniqueness of Reflected Solutions of Stochastic Equations Driven by Symmetric Stable Processes". In Kabanov, Y.; Liptser, R.; Stoyanov, J. (eds.). <span class="id-lock-limited" title="Free access subject to limited trial, subscription normally required" id="mwww"><a rel="mw:ExtLink nofollow" href="https://archive.org/details/fromstochasticca00kaba_517" class="external text" id="mwxA"><i id="mwxQ">From Stochastic Calculus to Mathematical Finance: The Shiryaev Festschrift</i></a></span>. Springer. p.<span typeof="mw:Entity" id="mwxg"> </span><a rel="mw:ExtLink nofollow" href="https://archive.org/details/fromstochasticca00kaba_517/page/n261" class="external text" id="mwxw">228</a>. <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/ISBN_(identifier)" title="ISBN (identifier)" class="mw-redirect" id="mwyA">ISBN</a><span typeof="mw:Entity" id="mwyQ"> </span><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Special:BookSources/9783540307884" title="Special:BookSources/9783540307884" id="mwyg"><bdi id="mwyw">9783540307884</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=On+Existence+and+Uniqueness+of+Reflected+Solutions+of+Stochastic+Equations+Driven+by+Symmetric+Stable+Processes&amp;rft.btitle=From+Stochastic+Calculus+to+Mathematical+Finance%3A+The+Shiryaev+Festschrift&amp;rft.pages=228&amp;rft.pub=Springer&amp;rft.date=2006&amp;rft.isbn=9783540307884&amp;rft.au=Engelbert%2C+H.J.%2C+Kurenok%2C+V.P.+%26+Zalinescu%2C+A.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Ffromstochasticca00kaba_517&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt5" id="mwzA"></span><span class="cs1-maint citation-comment" about="#mwt5" id="mwzQ"><code class="cs1-code" id="mwzg">{{<a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Template:Cite_book" title="Template:Cite book" id="mwzw">cite book</a>}}</code>:  CS1 maint: multiple names: authors list (<a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list" id="mw0A">link</a>)</span><link rel="mw:PageProp/Category" href="./Category:CS1_maint:_multiple_names:_authors_list" about="#mwt5" id="mw0Q"/></span></li>
+<li about="#cite_note-Winkel-3" id="cite_note-Winkel-3" data-mw-footnote-number="3"><span class="mw-cite-backlink" id="mw0g"><a href="#cite_ref-Winkel_3-0" rel="mw:referencedBy" id="mw0w"><span class="mw-linkback-text" id="mw1A">↑</span></a></span> <span id="mw-reference-text-cite_note-Winkel-3" class="mw-reference-text reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" about="#mwt9" typeof="mw:Extension/templatestyles mw:Transclusion" id="mw1Q" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite web","href":"./Template:Cite_web"},"params":{"title":{"wt":"Introduction to Levy processes"},"author":{"wt":"Winkel, M."},"pages":{"wt":"15–16"},"url":{"wt":"http://www.stats.ox.ac.uk/~winkel/lp1.pdf"},"access-date":{"wt":"2013-02-07"}},"i":0}}]}'/><cite id="CITEREFWinkel,_M." class="citation web cs1" about="#mwt9">Winkel, M. <a rel="mw:ExtLink nofollow" href="http://www.stats.ox.ac.uk/~winkel/lp1.pdf" class="external text" id="mw1g">"Introduction to Levy processes"</a> <span class="cs1-format" id="mw1w">(PDF)</span>. pp.<span typeof="mw:Entity" id="mw2A"> </span><span class="nowrap" id="mw2Q">15–</span>16<span class="reference-accessdate" id="mw2g">. Retrieved <span class="nowrap" id="mw2w">2013-02-07</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Introduction+to+Levy+processes&amp;rft.pages=15-16&amp;rft.au=Winkel%2C+M.&amp;rft_id=http%3A%2F%2Fwww.stats.ox.ac.uk%2F~winkel%2Flp1.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt9" id="mw3A"></span></span></li>
+<li about="#cite_note-4" id="cite_note-4" data-mw-footnote-number="4"><span class="mw-cite-backlink" id="mw3Q"><a href="#cite_ref-4" rel="mw:referencedBy" id="mw3g"><span class="mw-linkback-text" id="mw3w">↑</span></a></span> <span id="mw-reference-text-cite_note-4" class="mw-reference-text reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" about="#mwt12" typeof="mw:Extension/templatestyles mw:Transclusion" id="mw4A" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite book","href":"./Template:Cite_book"},"params":{"title":{"wt":"Pseudo Differential Operators &amp; Markov Processes: Markov Processes And Applications, Volume 3"},"author":{"wt":"Jacob, N."},"page":{"wt":"135"},"year":{"wt":"2005"},"publisher":{"wt":"Imperial College Press"},"isbn":{"wt":"9781860945687"}},"i":0}}]}'/><cite id="CITEREFJacob,_N.2005" class="citation book cs1" about="#mwt12">Jacob, N. (2005). <i id="mw4Q">Pseudo Differential Operators &amp; Markov Processes: Markov Processes And Applications, Volume 3</i>. Imperial College Press. p.<span typeof="mw:Entity" id="mw4g"> </span>135. <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/ISBN_(identifier)" title="ISBN (identifier)" class="mw-redirect" id="mw4w">ISBN</a><span typeof="mw:Entity" id="mw5A"> </span><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Special:BookSources/9781860945687" title="Special:BookSources/9781860945687" id="mw5Q"><bdi id="mw5g">9781860945687</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Pseudo+Differential+Operators+%26+Markov+Processes%3A+Markov+Processes+And+Applications%2C+Volume+3&amp;rft.pages=135&amp;rft.pub=Imperial+College+Press&amp;rft.date=2005&amp;rft.isbn=9781860945687&amp;rft.au=Jacob%2C+N.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt12" id="mw5w"></span></span></li>
+<li about="#cite_note-5" id="cite_note-5" data-mw-footnote-number="5"><span class="mw-cite-backlink" id="mw6A"><a href="#cite_ref-5" rel="mw:referencedBy" id="mw6Q"><span class="mw-linkback-text" id="mw6g">↑</span></a></span> <span id="mw-reference-text-cite_note-5" class="mw-reference-text reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" about="#mwt15" typeof="mw:Extension/templatestyles mw:Transclusion" id="mw6w" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite book","href":"./Template:Cite_book"},"params":{"title":{"wt":"Stochastic Processes: Theory and Methods"},"editor":{"wt":"Shanbhag, D.N."},"chapter":{"wt":"Some elements on Lévy processes"},"author":{"wt":"Bertoin, J."},"page":{"wt":"122"},"year":{"wt":"2001"},"publisher":{"wt":"Gulf Professional Publishing"},"isbn":{"wt":"9780444500144"}},"i":0}}]}'/><cite id="CITEREFBertoin,_J.2001" class="citation book cs1" about="#mwt15">Bertoin, J. (2001). "Some elements on Lévy processes". In Shanbhag, D.N. (ed.). <i id="mw7A">Stochastic Processes: Theory and Methods</i>. Gulf Professional Publishing. p.<span typeof="mw:Entity" id="mw7Q"> </span>122. <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/ISBN_(identifier)" title="ISBN (identifier)" class="mw-redirect" id="mw7g">ISBN</a><span typeof="mw:Entity" id="mw7w"> </span><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Special:BookSources/9780444500144" title="Special:BookSources/9780444500144" id="mw8A"><bdi id="mw8Q">9780444500144</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Some+elements+on+L%C3%A9vy+processes&amp;rft.btitle=Stochastic+Processes%3A+Theory+and+Methods&amp;rft.pages=122&amp;rft.pub=Gulf+Professional+Publishing&amp;rft.date=2001&amp;rft.isbn=9780444500144&amp;rft.au=Bertoin%2C+J.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt15" id="mw8g"></span></span></li>
+<li about="#cite_note-6" id="cite_note-6" data-mw-footnote-number="6"><span class="mw-cite-backlink" id="mw8w"><a href="#cite_ref-6" rel="mw:referencedBy" id="mw9A"><span class="mw-linkback-text" id="mw9Q">↑</span></a></span> <span id="mw-reference-text-cite_note-6" class="mw-reference-text reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" about="#mwt20" typeof="mw:Extension/templatestyles mw:Transclusion" id="mw9g" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite book","href":"./Template:Cite_book"},"params":{"title":{"wt":"Handbook of Monte Carlo Methods"},"url":{"wt":"https://archive.org/details/handbookmontecar00kroe"},"url-access":{"wt":"limited"},"author1":{"wt":"Kroese, D.P."},"author-link1":{"wt":"Dirk Kroese"},"author2":{"wt":"Taimre, T."},"author3":{"wt":"Botev, Z.I."},"page":{"wt":"[https://archive.org/details/handbookmontecar00kroe/page/n236 214]"},"year":{"wt":"2011"},"publisher":{"wt":"John Wiley &amp; Sons"},"isbn":{"wt":"9781118014950"}},"i":0}}]}'/><cite id="CITEREFKroese,_D.P.Taimre,_T.Botev,_Z.I.2011" class="citation book cs1" about="#mwt20"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Dirk_Kroese" title="Dirk Kroese" id="mw9w">Kroese, D.P.</a>; Taimre, T.; Botev, Z.I. (2011). <span class="id-lock-limited" title="Free access subject to limited trial, subscription normally required" id="mw-A"><a rel="mw:ExtLink nofollow" href="https://archive.org/details/handbookmontecar00kroe" class="external text" id="mw-Q"><i id="mw-g">Handbook of Monte Carlo Methods</i></a></span>. John Wiley &amp; Sons. p.<span typeof="mw:Entity" id="mw-w"> </span><a rel="mw:ExtLink nofollow" href="https://archive.org/details/handbookmontecar00kroe/page/n236" class="external text" id="mw_A">214</a>. <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/ISBN_(identifier)" title="ISBN (identifier)" class="mw-redirect" id="mw_Q">ISBN</a><span typeof="mw:Entity" id="mw_g"> </span><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Special:BookSources/9781118014950" title="Special:BookSources/9781118014950" id="mw_w"><bdi id="mwAQA">9781118014950</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+Monte+Carlo+Methods&amp;rft.pages=214&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=2011&amp;rft.isbn=9781118014950&amp;rft.au=Kroese%2C+D.P.&amp;rft.au=Taimre%2C+T.&amp;rft.au=Botev%2C+Z.I.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fhandbookmontecar00kroe&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt20" id="mwAQE"></span></span></li>
+<li about="#cite_note-applebaum-7" id="cite_note-applebaum-7" data-mw-footnote-number="7"><span rel="mw:referencedBy" class="mw-cite-backlink" id="mwAQI"><a href="#cite_ref-applebaum_7-0" id="mwAQM"><span class="mw-linkback-text" id="mwAQQ">1</span></a> <a href="#cite_ref-applebaum_7-1" id="mwAQU"><span class="mw-linkback-text" id="mwAQY">2</span></a> <a href="#cite_ref-applebaum_7-2" id="mwAQc"><span class="mw-linkback-text" id="mwAQg">3</span></a></span> <span id="mw-reference-text-cite_note-applebaum-7" class="mw-reference-text reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" about="#mwt23" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwAQk" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite web","href":"./Template:Cite_web"},"params":{"title":{"wt":"Lectures on Lévy processes and Stochastic calculus, Braunschweig; Lecture 2: Lévy processes"},"url":{"wt":"http://www.applebaum.staff.shef.ac.uk/Brauns2notes.pdf"},"author":{"wt":"Applebaum, D."},"pages":{"wt":"37–53"},"publisher":{"wt":"University of Sheffield"},"archive-url":{"wt":"https://web.archive.org/web/20150605072409/http://www.applebaum.staff.shef.ac.uk/Brauns2notes.pdf"},"archive-date":{"wt":"2015-06-05"}},"i":0}}]}'/><cite id="CITEREFApplebaum,_D." class="citation web cs1" about="#mwt23">Applebaum, D. <a rel="mw:ExtLink nofollow" href="https://web.archive.org/web/20150605072409/http://www.applebaum.staff.shef.ac.uk/Brauns2notes.pdf" class="external text" id="mwAQo">"Lectures on Lévy processes and Stochastic calculus, Braunschweig; Lecture 2: Lévy processes"</a> <span class="cs1-format" id="mwAQs">(PDF)</span>. University of Sheffield. pp.<span typeof="mw:Entity" id="mwAQw"> </span><span class="nowrap" id="mwAQ0">37–</span>53. Archived from <a rel="mw:ExtLink nofollow" href="http://www.applebaum.staff.shef.ac.uk/Brauns2notes.pdf" class="external text" id="mwAQ4">the original</a> <span class="cs1-format" id="mwAQ8">(PDF)</span> on 2015-06-05.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Lectures+on+L%C3%A9vy+processes+and+Stochastic+calculus%2C+Braunschweig%3B+Lecture+2%3A+L%C3%A9vy+processes&amp;rft.pages=37-53&amp;rft.pub=University+of+Sheffield&amp;rft.au=Applebaum%2C+D.&amp;rft_id=http%3A%2F%2Fwww.applebaum.staff.shef.ac.uk%2FBrauns2notes.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt23" id="mwARA"></span></span></li>
+<li about="#cite_note-cinlar-8" id="cite_note-cinlar-8" data-mw-footnote-number="8"><span rel="mw:referencedBy" class="mw-cite-backlink" id="mwARE"><a href="#cite_ref-cinlar_8-0" id="mwARI"><span class="mw-linkback-text" id="mwARM">1</span></a> <a href="#cite_ref-cinlar_8-1" id="mwARQ"><span class="mw-linkback-text" id="mwARU">2</span></a> <a href="#cite_ref-cinlar_8-2" id="mwARY"><span class="mw-linkback-text" id="mwARc">3</span></a></span> <span id="mw-reference-text-cite_note-cinlar-8" class="mw-reference-text reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" about="#mwt39" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwARg" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite book","href":"./Template:Cite_book"},"params":{"title":{"wt":"Probability and Stochastics"},"url":{"wt":"https://archive.org/details/probabilitystoch00inla_992"},"url-access":{"wt":"limited"},"author":{"wt":"Cinlar, E."},"page":{"wt":"[https://archive.org/details/probabilitystoch00inla_992/page/n346 332]"},"year":{"wt":"2011"},"publisher":{"wt":"Springer"},"isbn":{"wt":"9780387878591"}},"i":0}}]}'/><cite id="CITEREFCinlar,_E.2011" class="citation book cs1" about="#mwt39">Cinlar, E. (2011). <span class="id-lock-limited" title="Free access subject to limited trial, subscription normally required" id="mwARk"><a rel="mw:ExtLink nofollow" href="https://archive.org/details/probabilitystoch00inla_992" class="external text" id="mwARo"><i id="mwARs">Probability and Stochastics</i></a></span>. Springer. p.<span typeof="mw:Entity" id="mwARw"> </span><a rel="mw:ExtLink nofollow" href="https://archive.org/details/probabilitystoch00inla_992/page/n346" class="external text" id="mwAR0">332</a>. <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/ISBN_(identifier)" title="ISBN (identifier)" class="mw-redirect" id="mwAR4">ISBN</a><span typeof="mw:Entity" id="mwAR8"> </span><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Special:BookSources/9780387878591" title="Special:BookSources/9780387878591" id="mwASA"><bdi id="mwASE">9780387878591</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Probability+and+Stochastics&amp;rft.pages=332&amp;rft.pub=Springer&amp;rft.date=2011&amp;rft.isbn=9780387878591&amp;rft.au=Cinlar%2C+E.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fprobabilitystoch00inla_992&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt39" id="mwASI"></span></span></li>
+<li about="#cite_note-essentials-9" id="cite_note-essentials-9" data-mw-footnote-number="9"><span class="mw-cite-backlink" id="mwASM"><a href="#cite_ref-essentials_9-0" rel="mw:referencedBy" id="mwASQ"><span class="mw-linkback-text" id="mwASU">↑</span></a></span> <span id="mw-reference-text-cite_note-essentials-9" class="mw-reference-text reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" about="#mwt42" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwASY" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Citation/CS1/styles.css"},"body":{"extsrc":""},"parts":[{"template":{"target":{"wt":"cite book","href":"./Template:Cite_book"},"params":{"title":{"wt":"Essentials of Stochastic Processes"},"author":{"wt":"Itô, K."},"author-link":{"wt":"Kiyosi Itô"},"page":{"wt":"54"},"publisher":{"wt":"American Mathematical Society"},"year":{"wt":"2006"},"isbn":{"wt":"9780821838983"}},"i":0}}]}'/><cite id="CITEREFItô,_K.2006" class="citation book cs1" about="#mwt42"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Kiyosi_Itô" title="Kiyosi Itô" id="mwASc">Itô, K.</a> (2006). <i id="mwASg">Essentials of Stochastic Processes</i>. American Mathematical Society. p.<span typeof="mw:Entity" id="mwASk"> </span>54. <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/ISBN_(identifier)" title="ISBN (identifier)" class="mw-redirect" id="mwASo">ISBN</a><span typeof="mw:Entity" id="mwASs"> </span><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Special:BookSources/9780821838983" title="Special:BookSources/9780821838983" id="mwASw"><bdi id="mwAS0">9780821838983</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Essentials+of+Stochastic+Processes&amp;rft.pages=54&amp;rft.pub=American+Mathematical+Society&amp;rft.date=2006&amp;rft.isbn=9780821838983&amp;rft.au=It%C3%B4%2C+K.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACauchy+process" class="Z3988" about="#mwt42" id="mwAS4"></span></span></li>
+</ol></div></div>
+
+<div class="navbox-styles" about="#mwt65" typeof="mw:Transclusion" id="mwAS8" data-mw='{"parts":[{"template":{"target":{"wt":"Stochastic processes","href":"./Template:Stochastic_processes"},"params":{},"i":0}}]}'><span class="mw-empty-elt"><style data-mw-deduplicate="TemplateStyles:r1333133064" typeof="mw:Extension/templatestyles" about="#mwt66" data-mw='{"name":"templatestyles","attrs":{"src":"Hlist/styles.css"},"body":{"extsrc":""}}'>.mw-parser-output .hlist dl,.mw-parser-output .hlist ol,.mw-parser-output .hlist ul{margin:0;padding:0}.mw-parser-output .hlist dd,.mw-parser-output .hlist dt,.mw-parser-output .hlist li{margin:0;display:inline}.mw-parser-output .hlist.inline,.mw-parser-output .hlist.inline dl,.mw-parser-output .hlist.inline ol,.mw-parser-output .hlist.inline ul,.mw-parser-output .hlist dl dl,.mw-parser-output .hlist dl ol,.mw-parser-output .hlist dl ul,.mw-parser-output .hlist ol dl,.mw-parser-output .hlist ol ol,.mw-parser-output .hlist ol ul,.mw-parser-output .hlist ul dl,.mw-parser-output .hlist ul ol,.mw-parser-output .hlist ul ul{display:inline}.mw-parser-output .hlist .mw-empty-li{display:none}.mw-parser-output .hlist dt::after{content:": "}.mw-parser-output .hlist dd::after,.mw-parser-output .hlist li::after{content:"\a0 · ";font-weight:bold}.mw-parser-output .hlist dd:last-child::after,.mw-parser-output .hlist dt:last-child::after,.mw-parser-output .hlist li:last-child::after{content:none}.mw-parser-output .hlist dd dd:first-child::before,.mw-parser-output .hlist dd dt:first-child::before,.mw-parser-output .hlist dd li:first-child::before,.mw-parser-output .hlist dt dd:first-child::before,.mw-parser-output .hlist dt dt:first-child::before,.mw-parser-output .hlist dt li:first-child::before,.mw-parser-output .hlist li dd:first-child::before,.mw-parser-output .hlist li dt:first-child::before,.mw-parser-output .hlist li li:first-child::before{content:" (";font-weight:normal}.mw-parser-output .hlist dd dd:last-child::after,.mw-parser-output .hlist dd dt:last-child::after,.mw-parser-output .hlist dd li:last-child::after,.mw-parser-output .hlist dt dd:last-child::after,.mw-parser-output .hlist dt dt:last-child::after,.mw-parser-output .hlist dt li:last-child::after,.mw-parser-output .hlist li dd:last-child::after,.mw-parser-output .hlist li dt:last-child::after,.mw-parser-output .hlist li li:last-child::after{content:")";font-weight:normal}.mw-parser-output .hlist ol{counter-reset:listitem}.mw-parser-output .hlist ol>li{counter-increment:listitem}.mw-parser-output .hlist ol>li::before{content:" "counter(listitem)"\a0 "}.mw-parser-output .hlist dd ol>li:first-child::before,.mw-parser-output .hlist dt ol>li:first-child::before,.mw-parser-output .hlist li ol>li:first-child::before{content:" ("counter(listitem)"\a0 "}</style><style data-mw-deduplicate="TemplateStyles:r1364279517" typeof="mw:Extension/templatestyles" about="#mwt67" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Navbox/styles.css"},"body":{"extsrc":""}}'>.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox-styles+.navbox,.mw-parser-output .navbox+span.mw-empty-elt+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd;color:inherit}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf;color:inherit}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf;color:inherit}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff;color:inherit}.mw-parser-output .navbox-even{background-color:#f7f7f7;color:inherit}.mw-parser-output .navbox-odd{background-color:transparent;color:inherit}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}body.skin--responsive .mw-parser-output .navbox-image img{max-width:none!important}@media print{body.ns-0 .mw-parser-output .navbox{display:none!important}}</style></span></div><div role="navigation" class="navbox" aria-labelledby="Stochastic_processes8169" style="padding:3px" about="#mwt65" id="mwATA"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><span class="mw-empty-elt"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333133064" about="#mwt68" typeof="mw:Extension/templatestyles" data-mw='{"name":"templatestyles","attrs":{"src":"Hlist/styles.css"},"body":{"extsrc":""}}'/><style data-mw-deduplicate="TemplateStyles:r1239400231" typeof="mw:Extension/templatestyles" about="#mwt69" data-mw='{"name":"templatestyles","attrs":{"src":"Module:Navbar/styles.css"},"body":{"extsrc":""}}'>.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}html.skin-theme-clientpref-night .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}@media(prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}}@media print{.mw-parser-output .navbar{display:none!important}}</style></span><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Template:Stochastic_processes" title="Template:Stochastic processes"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Template_talk:Stochastic_processes" title="Template talk:Stochastic processes"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Special:EditPage/Template:Stochastic_processes" title="Special:EditPage/Template:Stochastic processes"><abbr title="Edit this template">e</abbr></a></li></ul></div><div id="Stochastic_processes8169" style="font-size:114%;margin:0 4em"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stochastic_process" title="Stochastic process">Stochastic processes</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Discrete-time_stochastic_process" title="Discrete-time stochastic process" class="mw-redirect">Discrete time</a></th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Bernoulli_process" title="Bernoulli process">Bernoulli process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Branching_process" title="Branching process">Branching process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Chinese_restaurant_process" title="Chinese restaurant process">Chinese restaurant process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Galton–Watson_process" title="Galton–Watson process">Galton–Watson process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables" title="Independent and identically distributed random variables">Independent and identically distributed random variables</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Markov_chain" title="Markov chain">Markov chain</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Moran_process" title="Moran process">Moran process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Random_walk" title="Random walk">Random walk</a>
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Loop-erased_random_walk" title="Loop-erased random walk">Loop-erased</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Self-avoiding_walk" title="Self-avoiding walk">Self-avoiding</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Biased_random_walk_on_a_graph" title="Biased random walk on a graph"> Biased</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Maximal_entropy_random_walk" title="Maximal entropy random walk">Maximal entropy</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Continuous-time_stochastic_process" title="Continuous-time stochastic process">Continuous time</a></th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Additive_process" title="Additive process">Additive process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Airy_process" title="Airy process">Airy process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Bessel_process" title="Bessel process">Bessel process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Birth–death_process" title="Birth–death process">Birth–death process</a>
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Birth_process" title="Birth process">pure birth</a></li></ul></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Wiener_process" title="Wiener process">Brownian motion</a>
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Brownian_bridge" title="Brownian bridge">Bridge</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Dyson_Brownian_motion" title="Dyson Brownian motion">Dyson</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Brownian_excursion" title="Brownian excursion">Excursion</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Fractional_Brownian_motion" title="Fractional Brownian motion">Fractional</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Geometric_Brownian_motion" title="Geometric Brownian motion">Geometric</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Brownian_meander" title="Brownian meander">Meander</a></li></ul></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Cauchy_process" class="mw-selflink selflink">Cauchy process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Contact_process_(mathematics)" title="Contact process (mathematics)">Contact process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Continuous-time_random_walk" title="Continuous-time random walk">Continuous-time random walk</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Cox_process" title="Cox process">Cox process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Diffusion_process" title="Diffusion process">Diffusion process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Empirical_process" title="Empirical process">Empirical process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Feller_process" title="Feller process">Feller process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Fleming–Viot_process" title="Fleming–Viot process">Fleming–Viot process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Gamma_process" title="Gamma process">Gamma process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Geometric_process" title="Geometric process">Geometric process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Hawkes_process" title="Hawkes process">Hawkes process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Hunt_process" title="Hunt process">Hunt process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Interacting_particle_system" title="Interacting particle system">Interacting particle systems</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Itô_diffusion" title="Itô diffusion">Itô diffusion</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Itô_process" title="Itô process" class="mw-redirect">Itô process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Jump_diffusion" title="Jump diffusion">Jump diffusion</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Jump_process" title="Jump process">Jump process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Lévy_process" title="Lévy process">Lévy process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Local_time_(mathematics)" title="Local time (mathematics)">Local time</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Markov_additive_process" title="Markov additive process">Markov additive process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/McKean–Vlasov_process" title="McKean–Vlasov process">McKean–Vlasov process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Ornstein–Uhlenbeck_process" title="Ornstein–Uhlenbeck process">Ornstein–Uhlenbeck process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Poisson_point_process" title="Poisson point process">Poisson process</a>
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Compound_Poisson_process" title="Compound Poisson process">Compound</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Non-homogeneous_Poisson_process" title="Non-homogeneous Poisson process" class="mw-redirect">Non-homogeneous</a></li></ul></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Quasimartingale" title="Quasimartingale">Quasimartingale</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Schramm–Loewner_evolution" title="Schramm–Loewner evolution">Schramm–Loewner evolution</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Semimartingale" title="Semimartingale">Semimartingale</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Sigma-martingale" title="Sigma-martingale">Sigma-martingale</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stable_process" title="Stable process">Stable process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Superprocess" title="Superprocess">Superprocess</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Telegraph_process" title="Telegraph process">Telegraph process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Variance_gamma_process" title="Variance gamma process">Variance gamma process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Wiener_process" title="Wiener process">Wiener process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Wiener_sausage" title="Wiener sausage">Wiener sausage</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Both</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Branching_process" title="Branching process">Branching process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Gaussian_process" title="Gaussian process">Gaussian process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Hidden_Markov_model" title="Hidden Markov model">Hidden Markov model (HMM)</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Markov_process" title="Markov process" class="mw-redirect">Markov process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Martingale_(probability_theory)" title="Martingale (probability theory)">Martingale</a>
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Martingale_difference_sequence" title="Martingale difference sequence">Differences</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Local_martingale" title="Local martingale">Local</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Submartingale" title="Submartingale" class="mw-redirect">Sub-</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Supermartingale" title="Supermartingale" class="mw-redirect">Super-</a></li></ul></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Random_dynamical_system" title="Random dynamical system">Random dynamical system</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Regenerative_process" title="Regenerative process">Regenerative process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Renewal_process" title="Renewal process" class="mw-redirect">Renewal process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stochastic_chains_with_memory_of_variable_length" title="Stochastic chains with memory of variable length">Stochastic chains with memory of variable length</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/White_noise" title="White noise">White noise</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Fields and other</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Dirichlet_process" title="Dirichlet process">Dirichlet process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Gaussian_random_field" title="Gaussian random field">Gaussian random field</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Gibbs_measure" title="Gibbs measure">Gibbs measure</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Hopfield_model" title="Hopfield model" class="mw-redirect">Hopfield model</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Ising_model" title="Ising model">Ising model</a> 
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Potts_model" title="Potts model">Potts model</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Boolean_network" title="Boolean network">Boolean network</a></li></ul></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Markov_random_field" title="Markov random field">Markov random field</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Percolation_theory" title="Percolation theory">Percolation</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Pitman–Yor_process" title="Pitman–Yor process">Pitman–Yor process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Point_process" title="Point process">Point process</a>
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Point_process#Cox_point_process" title="Point process">Cox</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Determinantal_point_process" title="Determinantal point process">Determinantal</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Poisson_point_process" title="Poisson point process">Poisson</a></li></ul></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Random_field" title="Random field">Random field</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Random_graph" title="Random graph">Random graph</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Time_series" title="Time series">Time series models</a></th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity" title="Autoregressive conditional heteroskedasticity">Autoregressive conditional heteroskedasticity (ARCH) model</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average" title="Autoregressive integrated moving average">Autoregressive integrated moving average (ARIMA) model</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Autoregressive_model" title="Autoregressive model">Autoregressive (AR) model</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Autoregressive_moving-average_model" title="Autoregressive moving-average model">Autoregressive moving-average (ARMA) model</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity" title="Autoregressive conditional heteroskedasticity">Generalized autoregressive conditional heteroskedasticity (GARCH) model</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Moving-average_model" title="Moving-average model">Moving-average (MA) model</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Asset_pricing_model" title="Asset pricing model" class="mw-redirect">Financial models</a></th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Binomial_options_pricing_model" title="Binomial options pricing model">Binomial options pricing model</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Black–Derman–Toy_model" title="Black–Derman–Toy model">Black–Derman–Toy</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Black–Karasinski_model" title="Black–Karasinski model">Black–Karasinski</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Black–Scholes_model" title="Black–Scholes model">Black–Scholes</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Chan–Karolyi–Longstaff–Sanders_process" title="Chan–Karolyi–Longstaff–Sanders process">Chan–Karolyi–Longstaff–Sanders (CKLS)</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Chen_model" title="Chen model">Chen</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Constant_elasticity_of_variance_model" title="Constant elasticity of variance model">Constant elasticity of variance (CEV)</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Cox–Ingersoll–Ross_model" title="Cox–Ingersoll–Ross model">Cox–Ingersoll–Ross (CIR)</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Garman–Kohlhagen_model" title="Garman–Kohlhagen model" class="mw-redirect">Garman–Kohlhagen</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Heath–Jarrow–Morton_framework" title="Heath–Jarrow–Morton framework">Heath–Jarrow–Morton (HJM)</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Heston_model" title="Heston model">Heston</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Ho–Lee_model" title="Ho–Lee model">Ho–Lee</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Hull–White_model" title="Hull–White model">Hull–White</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Korn–Kreer–Lenssen_model" title="Korn–Kreer–Lenssen model">Korn-Kreer-Lenssen</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/LIBOR_market_model" title="LIBOR market model">LIBOR market</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Rendleman–Bartter_model" title="Rendleman–Bartter model">Rendleman–Bartter</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/SABR_volatility_model" title="SABR volatility model">SABR volatility</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Vasicek_model" title="Vasicek model">Vašíček</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Wilkie_investment_model" title="Wilkie investment model">Wilkie</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Actuarial_mathematics" title="Actuarial mathematics" class="mw-redirect">Actuarial models</a></th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Bühlmann_model" title="Bühlmann model">Bühlmann</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Cramér–Lundberg_model" title="Cramér–Lundberg model" class="mw-redirect">Cramér–Lundberg</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Risk_process" title="Risk process" class="mw-redirect">Risk process</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Sparre–Anderson_model" title="Sparre–Anderson model" class="mw-redirect">Sparre–Anderson</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Queueing_model" title="Queueing model" class="mw-redirect">Queueing models</a></th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Bulk_queue" title="Bulk queue">Bulk</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Fluid_queue" title="Fluid queue">Fluid</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/G-network" title="G-network">Generalized queueing network</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/M/G/1_queue" title="M/G/1 queue">M/G/1</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/M/M/1_queue" title="M/M/1 queue">M/M/1</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/M/M/c_queue" title="M/M/c queue">M/M/c</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Properties</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Càdlàg" title="Càdlàg">Càdlàg paths</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Continuous_stochastic_process" title="Continuous stochastic process">Continuous</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Sample-continuous_process" title="Sample-continuous process">Continuous paths</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Ergodicity" title="Ergodicity">Ergodic</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Exchangeable_random_variables" title="Exchangeable random variables">Exchangeable</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Feller-continuous_process" title="Feller-continuous process">Feller-continuous</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Gauss–Markov_process" title="Gauss–Markov process">Gauss–Markov</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Markov_property" title="Markov property">Markov</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Mixing_(mathematics)" title="Mixing (mathematics)">Mixing</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Piecewise-deterministic_Markov_process" title="Piecewise-deterministic Markov process">Piecewise-deterministic</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Predictable_process" title="Predictable process">Predictable</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Progressively_measurable_process" title="Progressively measurable process">Progressively measurable</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Self-similar_process" title="Self-similar process">Self-similar</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stationary_process" title="Stationary process">Stationary</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Time_reversibility" title="Time reversibility">Time-reversible</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Limit theorems</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Central_limit_theorem" title="Central limit theorem">Central limit theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Donsker's_theorem" title="Donsker's theorem">Donsker's theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Doob's_martingale_convergence_theorems" title="Doob's martingale convergence theorems">Doob's martingale convergence theorems</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Ergodic_theory" title="Ergodic theory">Ergodic theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Fisher–Tippett–Gnedenko_theorem" title="Fisher–Tippett–Gnedenko theorem">Fisher–Tippett–Gnedenko theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Large_deviation_principle" title="Large deviation principle" class="mw-redirect">Large deviation principle</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Law_of_large_numbers" title="Law of large numbers">Law of large numbers (weak/strong)</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Law_of_the_iterated_logarithm" title="Law of the iterated logarithm">Law of the iterated logarithm</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Maximal_ergodic_theorem" title="Maximal ergodic theorem">Maximal ergodic theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Sanov's_theorem" title="Sanov's theorem">Sanov's theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Zero–one_law" title="Zero–one law">Zero–one laws</a> (<a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Blumenthal's_zero–one_law" title="Blumenthal's zero–one law">Blumenthal</a>, <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Borel–Cantelli_lemma" title="Borel–Cantelli lemma">Borel–Cantelli</a>, <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Engelbert–Schmidt_zero–one_law" title="Engelbert–Schmidt zero–one law">Engelbert–Schmidt</a>, <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Hewitt–Savage_zero–one_law" title="Hewitt–Savage zero–one law">Hewitt–Savage</a>, <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Kolmogorov's_zero–one_law" title="Kolmogorov's zero–one law"> Kolmogorov</a>, <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Lévy's_zero–one_law" title="Lévy's zero–one law" class="mw-redirect">Lévy</a>)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/List_of_inequalities#Probability_theory_and_statistics" title="List of inequalities">Inequalities</a></th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Burkholder–Davis–Gundy_inequalities" title="Burkholder–Davis–Gundy inequalities" class="mw-redirect">Burkholder–Davis–Gundy</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Doob's_martingale_inequality" title="Doob's martingale inequality">Doob's martingale</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Doob's_upcrossing_inequality" title="Doob's upcrossing inequality" class="mw-redirect">Doob's upcrossing</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Kunita–Watanabe_inequality" title="Kunita–Watanabe inequality">Kunita–Watanabe</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Marcinkiewicz–Zygmund_inequality" title="Marcinkiewicz–Zygmund inequality">Marcinkiewicz–Zygmund</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Tools</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Cameron–Martin_theorem" title="Cameron–Martin theorem">Cameron–Martin theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Convergence_of_random_variables" title="Convergence of random variables">Convergence of random variables</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Doléans-Dade_exponential" title="Doléans-Dade exponential">Doléans-Dade exponential</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Doob_decomposition_theorem" title="Doob decomposition theorem">Doob decomposition theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Doob–Meyer_decomposition_theorem" title="Doob–Meyer decomposition theorem">Doob–Meyer decomposition theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Doob's_optional_stopping_theorem" title="Doob's optional stopping theorem" class="mw-redirect">Doob's optional stopping theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Dynkin's_formula" title="Dynkin's formula">Dynkin's formula</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Feynman–Kac_formula" title="Feynman–Kac formula">Feynman–Kac formula</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Filtration_(probability_theory)" title="Filtration (probability theory)">Filtration</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Girsanov_theorem" title="Girsanov theorem">Girsanov theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Infinitesimal_generator_(stochastic_processes)" title="Infinitesimal generator (stochastic processes)">Infinitesimal generator</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Itô_integral" title="Itô integral" class="mw-redirect">Itô integral</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Itô's_lemma" title="Itô's lemma">Itô's lemma</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Kolmogorov_continuity_theorem" title="Kolmogorov continuity theorem">Kolmogorov continuity theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Kolmogorov_extension_theorem" title="Kolmogorov extension theorem">Kolmogorov extension theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Kosambi–Karhunen–Loève_theorem" title="Kosambi–Karhunen–Loève theorem">Kosambi–Karhunen–Loève theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Lévy–Prokhorov_metric" title="Lévy–Prokhorov metric">Lévy–Prokhorov metric</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Malliavin_calculus" title="Malliavin calculus">Malliavin calculus</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Martingale_representation_theorem" title="Martingale representation theorem">Martingale representation theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Optional_stopping_theorem" title="Optional stopping theorem">Optional stopping theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Prokhorov's_theorem" title="Prokhorov's theorem">Prokhorov's theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Quadratic_variation" title="Quadratic variation">Quadratic variation</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Reflection_principle_(Wiener_process)" title="Reflection principle (Wiener process)">Reflection principle</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Skorokhod_integral" title="Skorokhod integral">Skorokhod integral</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Skorokhod's_representation_theorem" title="Skorokhod's representation theorem">Skorokhod's representation theorem</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Skorokhod_space" title="Skorokhod space" class="mw-redirect">Skorokhod space</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Snell_envelope" title="Snell envelope">Snell envelope</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stochastic_differential_equation" title="Stochastic differential equation">Stochastic differential equation</a>
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Tanaka_equation" title="Tanaka equation">Tanaka</a></li></ul></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stopping_time" title="Stopping time">Stopping time</a>/<a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Hitting_time" title="Hitting time">Hitting time</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stratonovich_integral" title="Stratonovich integral">Stratonovich integral</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Uniform_integrability" title="Uniform integrability">Uniform integrability</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Usual_hypotheses" title="Usual hypotheses" class="mw-redirect">Usual hypotheses</a></li>
+<li>Wiener space
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Classical_Wiener_space" title="Classical Wiener space">Classical</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Abstract_Wiener_space" title="Abstract Wiener space">Abstract</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Disciplines</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Actuarial_mathematics" title="Actuarial mathematics" class="mw-redirect">Actuarial mathematics</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stochastic_control" title="Stochastic control">Control theory</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Econometrics" title="Econometrics">Econometrics</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Ergodic_theory" title="Ergodic theory">Ergodic theory</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Extreme_value_theory" title="Extreme value theory">Extreme value theory (EVT)</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Large_deviations_theory" title="Large deviations theory">Large deviations theory</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Mathematical_finance" title="Mathematical finance">Mathematical finance</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Mathematical_statistics" title="Mathematical statistics">Mathematical statistics</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Probability_theory" title="Probability theory">Probability theory</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Queueing_theory" title="Queueing theory">Queueing theory</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Renewal_theory" title="Renewal theory">Renewal theory</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Ruin_theory" title="Ruin theory">Ruin theory</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Signal_processing" title="Signal processing">Signal processing</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Statistics" title="Statistics">Statistics</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stochastic_analysis" title="Stochastic analysis" class="mw-redirect">Stochastic analysis</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Time_series_analysis" title="Time series analysis" class="mw-redirect">Time series analysis</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Machine_learning" title="Machine learning">Machine learning</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2"><div>
+<ul><li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/List_of_stochastic_processes_topics" title="List of stochastic processes topics">List of topics</a></li>
+<li><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Category:Stochastic_processes" title="Category:Stochastic processes">Category</a></li></ul>
+</div></td></tr></tbody></table></div>
+
+<link rel="mw:PageProp/Category" href="./Category:Lévy_processes" id="mwATE"/></section>
+<!-- 
+NewPP limit report
+Parsed by mw‐jobrunner.eqiad.main‐6dfd585f56‐kr46d
+Cached time: 20260811201608
+Cache expiry: 2592000
+Cache expiry source: Module:Citation/CS1 (os.date(%Y))
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, use‐parsoid]
+CPU time usage: 0.491 seconds
+Real time usage: 1.040 seconds
+Preprocessor visited node count: 671/1000000
+Revision size: 6126/2097152 bytes
+Post‐expand include size: 53076/2097152 bytes
+Template argument size: 542/2097152 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 31202/5000000 bytes
+Lua time usage: 0.075/10.000 seconds
+Lua memory usage: 5265087/52428800 bytes
+Number of Wikibase entities loaded: 0/500
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  783.804      1 -total
+  6.88%   53.926      7 Template:Cite_book
+  6.25%   48.979      1 Template:Short_description
+  3.58%   28.077      2 Template:Pagetype
+  1.77%   13.863      1 Template:Stochastic_processes
+  1.60%   12.571      1 Template:Navbox
+  1.59%   12.449      3 Template:Main_other
+  1.39%   10.904      1 Template:SDcat
+  0.98%    7.692      2 Template:Cite_web
+  0.52%    4.104      1 Template:Reflist
+-->
+
+<!-- Render ID 7cc986e5-95c1-11f1-b053-fd08eff50c5f -->
+
+<!-- Saved in parser cache with key enwiki:parsoid-pcache:38454328:|#|:idhash:useParsoid=1 and timestamp 20260811201608 and revision id 1355329741. Rendering was triggered because: view
+ -->
+
+<!-- Parsoid 0.24.0.0-alpha18 -->
+</div><!--
+Post‐processing cache key enwiki:postproc‐parsoid‐pcache:38454328:|#|:idhash:injectTOC=0!postproc=1!skin=vector‐2022!useParsoid=1!visibleLinks=wtsingle, generated at 20260812013420
+--><noscript><img src="https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat=desktop&amp;type=1x1&amp;usesul3=1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Cauchy_process&amp;oldid=1355329741">https://en.wikipedia.org/w/index.php?title=Cauchy_process&amp;oldid=1355329741</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw-interface=""><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Category</a>: <ul><li><a href="/wiki/Category:L%C3%A9vy_processes" title="Category:Lévy processes">Lévy processes</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">CS1 maint: multiple names: authors list</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			<footer id="footer" class="mw-footer" >
+				<ul id="footer-info" class="mw-portlet mw-portlet-footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 21 May 2026, at 06:32<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-renderedwith">Page was rendered with <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Parsoid" class="extiw" title="mw:Special:MyLanguage/Parsoid">Parsoid</a>.</li>
+	<li id="footer-info-copyright">Text is available under the <a href="/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" title="Wikipedia:Text of the Creative Commons Attribution-ShareAlike 4.0 International License">Creative Commons Attribution-ShareAlike 4.0 License</a>;
+additional terms may apply. By using this site, you agree to the <a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use" class="extiw" title="foundation:Special:MyLanguage/Policy:Terms of Use">Terms of Use</a> and <a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy" class="extiw" title="foundation:Special:MyLanguage/Policy:Privacy policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a rel="nofollow" class="external text" href="https://wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+				<ul id="footer-places" class="mw-portlet mw-portlet-footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-legal-safety-contacts"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information">Legal &amp; safety contacts</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.wikipedia.org/w/index.php?title=Cauchy_process&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+				<ul id="footer-icons" class="mw-portlet mw-portlet-footer-icons noprint">
+	<li id="footer-copyrightico"><a href="https://www.wikimedia.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/static/images/footer/wikimedia-button.svg" width="84" height="29"><img src="/static/images/footer/wikimedia.svg" width="25" height="25" alt="Wikimedia Foundation" lang="en" loading="lazy"></picture></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/w/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="/w/resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+			</footer>
+		</div>
+	</div> 
+</div> 
+<div class="vector-header-container vector-sticky-header-container no-font-mode-scale">
+	<div id="vector-sticky-header" class="vector-sticky-header">
+		<div class="vector-sticky-header-start">
+			<div class="vector-sticky-header-icon-start vector-button-flush-left" aria-hidden="true">
+				<button class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-sticky-header-search-toggle" tabindex="-1" data-event-name="ui.vector-sticky-search-form.icon"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search cdx-button__icon"></span>
+
+<span>Search</span>
+			</button>
+		</div>
+			
+		<div role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box">
+			<div class="vector-typeahead-search-container">
+				<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail">
+					<form action="/w/index.php" id="vector-sticky-search-form" class="cdx-search-input cdx-search-input--has-end-button">
+						<div  class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+							<div class="cdx-text-input cdx-text-input--has-start-icon">
+								<input
+									class="cdx-text-input__input mw-searchInput" autocomplete="off"
+									
+									type="search" name="search" placeholder="Search Wikipedia">
+								<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+							</div>
+							<input type="hidden" name="title" value="Special:Search">
+						</div>
+						<button class="cdx-button cdx-search-input__end-button">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-context-bar">
+				<nav aria-label="Contents" class="vector-toc-landmark">
+						
+					<div id="vector-sticky-header-toc" class="vector-dropdown mw-portlet mw-portlet-sticky-header-toc vector-sticky-header-toc vector-button-flush-left"  >
+						<input type="checkbox" id="vector-sticky-header-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-sticky-header-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"   >
+						<label id="vector-sticky-header-toc-label" for="vector-sticky-header-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+						</label>
+						<div class="vector-dropdown-content">
+					
+						<div id="vector-sticky-header-toc-unpinned-container" class="vector-unpinned-container">
+						</div>
+					
+						</div>
+					</div>
+			</nav>
+				<div class="vector-sticky-header-context-bar-primary" aria-hidden="true" ><span lang="en" dir="ltr"><span class="mw-page-title-main">Cauchy process</span></span></div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-end" aria-hidden="true">
+			<div class="vector-sticky-header-icons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-talk-sticky-header" tabindex="-1" data-event-name="talk-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbles mw-ui-icon-wikimedia-speechBubbles cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-subject-sticky-header" tabindex="-1" data-event-name="subject-sticky-header"><span class="vector-icon mw-ui-icon-article mw-ui-icon-wikimedia-article cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-history-sticky-header" tabindex="-1" data-event-name="history-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-history mw-ui-icon-wikimedia-wikimedia-history cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only mw-watchlink" id="ca-watchstar-sticky-header" tabindex="-1" data-event-name="watch-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-star mw-ui-icon-wikimedia-wikimedia-star cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-edit-sticky-header" tabindex="-1" data-event-name="wikitext-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-wikiText mw-ui-icon-wikimedia-wikimedia-wikiText cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-ve-edit-sticky-header" tabindex="-1" data-event-name="ve-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-edit mw-ui-icon-wikimedia-wikimedia-edit cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-viewsource-sticky-header" tabindex="-1" data-event-name="ve-edit-protected-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-editLock mw-ui-icon-wikimedia-wikimedia-editLock cdx-button__icon"></span>
+
+<span></span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-buttons">
+				<button class="cdx-button cdx-button--weight-quiet mw-interlanguage-selector" id="p-lang-btn-sticky-header" tabindex="-1" data-event-name="ui.dropdown-p-lang-btn-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-language mw-ui-icon-wikimedia-wikimedia-language cdx-button__icon"></span>
+
+<span>3 languages</span>
+			</button>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive" id="ca-addsection-sticky-header" tabindex="-1" data-event-name="addsection-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbleAdd-progressive mw-ui-icon-wikimedia-speechBubbleAdd-progressive cdx-button__icon"></span>
+
+<span>Add topic</span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-icon-end">
+				<div class="vector-user-links">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-85566b6868-ckhxc","wgBackendResponseTime":158,"wgPageParseReport":{"limitreport":{"cputime":"0.491","walltime":"1.040","ppvisitednodes":{"value":671,"limit":1000000},"revisionsize":{"value":6126,"limit":2097152},"postexpandincludesize":{"value":53076,"limit":2097152},"templateargumentsize":{"value":542,"limit":2097152},"expansiondepth":{"value":8,"limit":100},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":31202,"limit":5000000},"entityaccesscount":{"value":0,"limit":500},"timingprofile":["100.00%  783.804      1 -total","  6.88%   53.926      7 Template:Cite_book","  6.25%   48.979      1 Template:Short_description","  3.58%   28.077      2 Template:Pagetype","  1.77%   13.863      1 Template:Stochastic_processes","  1.60%   12.571      1 Template:Navbox","  1.59%   12.449      3 Template:Main_other","  1.39%   10.904      1 Template:SDcat","  0.98%    7.692      2 Template:Cite_web","  0.52%    4.104      1 Template:Reflist"]},"scribunto":{"limitreport-timeusage":{"value":"0.075","limit":"10.000"},"limitreport-memusage":{"value":5265087,"limit":52428800}},"cachereport":{"origin":"mw-jobrunner.eqiad.main-6dfd585f56-kr46d","timestamp":"20260811201608","ttl":2592000,"transientcontent":false,"expiry-source":"Module:Citation/CS1 (os.date(%Y))"}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Cauchy process","url":"https:\/\/en.wikipedia.org\/wiki\/Cauchy_process","sameAs":"http:\/\/www.wikidata.org\/entity\/Q5054342","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q5054342","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2013-02-07T20:14:54Z","dateModified":"2026-05-21T06:32:31Z","headline":"type of stochastic process in probability"}</script>
+</body>
+</html>
