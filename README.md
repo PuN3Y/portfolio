@@ -52,7 +52,7 @@ Also handles unknown file encoding via `chardet` at load time.
 
 ---
 
-### `SQL - Chinook Database`
+### `SQL - Stores Database`
 A SQL-only analysis of a scale-model retailer's sales database. Documents the schema and its relationships, profiles table sizes via `PRAGMA_TABLE_INFO`, then answers three commercial questions using CTEs, a created view and correlated subqueries:
 
 - **What to restock** — crosses stock-depletion rate against product revenue performance
