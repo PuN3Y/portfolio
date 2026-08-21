@@ -16,4 +16,5 @@ __pycache__/
 
 # Generated data — rebuilt by scripts in this repo
 /Python - Analysing Wikipedia Pages/results.csv
+/Python - Analysing Wikipedia Pages/wiki
 /Python and SQLite3 - Fundraising Deals/crunchbase-investments.db
