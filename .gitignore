@@ -1,4 +1,19 @@
+# IDE / tooling
+.idea/
+.vscode/
+.ai/
+.DS_Store
 /.ai/mcp/mcp.json
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
 /.idea/.gitignore
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+/.venv/
+/venv/
+
+# Generated data — rebuilt by scripts in this repo
+/Python - Analysing Wikipedia Pages/results.csv
+/Python and SQLite3 - Fundraising Deals/crunchbase-investments.db
