@@ -5,13 +5,16 @@ import pyarrow as pa
 import pyarrow.csv as pv
 
 _ARROW_SCHEMA = {
-    "date": pa.date32(), "open": pa.float32(), "high": pa.float32(),
-    "low": pa.float32(), "close": pa.float32(), "adj_close": pa.float32(),
+    "date": pa.timestamp("s"),
+    "open": pa.float64(),
+    "high": pa.float64(),
+    "low": pa.float64(),
+    "close": pa.float64(),
+    "adj_close": pa.float64(),
     "volume": pa.int64(),
 }
 
 def arrow_mapper(file_chunk, directory, columns):
-    """Arrow equivalent of mapper(). Returns (data, files_read)."""
     convert = pv.ConvertOptions(column_types=_ARROW_SCHEMA, include_columns=columns)
     read = pv.ReadOptions(use_threads=False)   # one thread per worker process
 

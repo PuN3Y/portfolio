@@ -14,7 +14,7 @@ END_DATE = "2026-01-01"
 PRICES_DIR = "prices"
 SYMBOLS_FILE = "nasdaqlisted.txt"
 REQUEST_DELAY = 0.05
-MAX_RETRIES = 3
+MAX_RETRIES = 1
 PROGRESS_EVERY = 50
 FAILED_LOG = "failed_symbols.csv"
 
