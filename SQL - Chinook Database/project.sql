@@ -207,5 +207,3 @@ SELECT year_month,
 
 SELECT ROUND(AVG(profit), 2) AS avg_profit_per_customer
   FROM CustomersByRevenue c_rev;
-
-SELECT
