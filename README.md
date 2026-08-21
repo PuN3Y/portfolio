@@ -7,9 +7,19 @@ Data analysis, data engineering and database projects in Python and SQL — work
 ## Projects
 
 ### `Python - Analysing Wikipedia Pages`
-A map/reduce framework built from scratch over a **961 MB subset of ~6,600 Wikipedia articles**, using `multiprocessing` to parallelise work across CPU cores. Includes a homemade `grep` supporting both exact and caseless matching, with mapper/reducer logic factored out into importable `.py` modules rather than kept in the notebook. The notebook validates its own output against real `grep` and investigates the discrepancy.
+A map/reduce framework built from scratch over a **961 MB subset of ~6,600 Wikipedia articles**, using `multiprocessing` to parallelise work across CPU cores and benchmarked against a single-process baseline.
 
-**Libraries:** `multiprocessing`, `functools`, `itertools`, `importlib`, `os`, `time`, `math`
+On top of that framework, a homemade `grep` developed across three iterations, each driven by validating output against real `grep` and diagnosing the gap:
+
+1. **Exact matching** — returns the lines in each file containing the target word. Verification against actual `grep` output showed a shortfall.
+2. **Caseless matching** — diagnosed the first cause of the shortfall (case sensitivity) and corrected it.
+3. **Full occurrence indexing** — diagnosed the second cause: a line containing the target word twice was still counted once. A `find_match_index` helper walks `str.find` forward from each hit to capture every occurrence, returning `(line, character index)` tuples.
+
+Results are exported to CSV with a 15-character context window reconstructed around each match, then loaded back for review.
+
+Mapper and reducer logic is factored into importable `.py` modules rather than left in the notebook.
+
+**Libraries:** `multiprocessing`, `functools`, `itertools`, `importlib`, `pandas`, `csv`, `os`, `time`, `math`
 
 ---
 
