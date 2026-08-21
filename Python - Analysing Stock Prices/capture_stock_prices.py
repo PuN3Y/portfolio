@@ -1,4 +1,3 @@
-
 import argparse
 import csv
 import os
@@ -74,7 +73,6 @@ def load_symbols(path, include_etfs=False):
             if line.strip() and not line.startswith("#")
         ]
 
-
 def fetch_symbol(symbol, start, end):
     """Fetch one symbol's history. Returns a DataFrame, or None if unavailable."""
     for attempt in range(1, MAX_RETRIES + 1):
@@ -96,7 +94,6 @@ def fetch_symbol(symbol, start, end):
             time.sleep(2 ** attempt)
     return None
 
-
 def write_csv(symbol, df, out_dir):
     """Write the DataFrame to prices/<symbol>.csv in the target schema."""
     path = os.path.join(out_dir, f"{symbol}.csv")
@@ -114,7 +111,6 @@ def write_csv(symbol, df, out_dir):
                 int(row["Volume"]),
             ])
     return path
-
 
 def main():
     parser = argparse.ArgumentParser(description="Download NASDAQ daily prices.")
@@ -162,8 +158,7 @@ def main():
         f"\nDone. {downloaded} downloaded, {skipped} already present, {failed} failed."
     )
     if failed:
-        print("Failures are usually delisted tickers or symbols renamed since 2017.")
-
+        print("Failures are usually delisted tickers or symbols renamed since 2026.")
 
 if __name__ == "__main__":
     main()
