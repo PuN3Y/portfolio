@@ -2,14 +2,19 @@
 import os
 import pandas as pd
 
-def mapper(file_chunk, directory):
-    stock_prices = {}
+def mapper(file_chunk, directory, columns):
+    prices = {}
     for file in file_chunk:
         name = os.path.splitext(file)[0]
-        stock_prices[name] = pd.read_csv(os.path.join(directory, file), encoding="UTF-8")
-    return stock_prices, len(file_chunk)
+        prices[name] = pd.read_csv(
+            os.path.join(directory, file),
+            usecols=columns,
+            parse_dates=["date"],
+            index_col="date",
+            encoding="utf-8",
+        )
+    return prices, len(file_chunk)
 
-def reducer(a, b):
-    merged = dict(a)
-    merged.update(b)
-    return merged
+def reducer(accumulated, chunk):
+    accumulated.update(chunk)
+    return accumulated
