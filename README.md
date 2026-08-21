@@ -97,4 +97,4 @@ An early project recommending an app genre to build for, using only native Pytho
 
 ## Notes
 
-Several of the earlier projects began as guided exercises hosted by Dataquest and were extended from there; the Wikipedia, Loans and Laptops projects are independent work.
+Several of the projects began as guided exercises hosted by Dataquest and were extended from there.
