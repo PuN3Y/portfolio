@@ -1,10 +1,21 @@
 # Portfolio
 
-Data analysis, data engineering and database projects in Python and SQL — working with data that doesn't fit in memory, optimising algorithms and query performance, and designing databases from scratch.
+Data analysis, data engineering, and database projects in Python and SQL: working with data that doesn't fit in memory, optimising algorithms and query performance, designing databases from scratch, and investigating why data that looks fine isn't.
 
 ---
 
 ## Projects
+
+### `Python - Analysing Stock Prices`
+Nineteen years of daily NASDAQ prices (1,363 tickers, 5.4 million ticker-days) downloaded, benchmarked, and analysed.
+
+**Ingestion benchmark.** Six loaders across a 2×3 grid: pandas and PyArrow, each run serially, on threads and on processes, with output structure held identical so the comparison isolates the method. Best result **5.4× faster than a naive loop**, and the grid shows the two parsers want opposite concurrency models, because pandas holds Python's interpreter lock while parsing and PyArrow releases it.
+
+**Data-quality investigation.** An average closing price of $20 trillion led back, via a ruled-out suspicion of my own `float32` schema, to Yahoo's split adjustment: prices are restated in today's share count, so serial reverse splitters carry an enormous cumulative factor. Three rounds of correction reduced the error by fourteen orders of magnitude without eliminating it. Yahoo does not retain corporate actions for delisted instruments, and those are disproportionately the ones that reverse-split. Ratios survive what levels do not, so returns are the only trustworthy answer here.
+
+**Libraries:** `pandas`, `pyarrow`, `numpy`, `matplotlib`, `yfinance`, `multiprocessing`, `csv`, `re`
+
+---
 
 ### `Python - Analysing Wikipedia Pages`
 A map/reduce framework built from scratch over a **961 MB subset of ~6,600 Wikipedia articles**, using `multiprocessing` to parallelise work across CPU cores and benchmarked against a single-process baseline.
