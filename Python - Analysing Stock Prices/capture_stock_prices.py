@@ -2,6 +2,7 @@ import argparse
 import csv
 import logging
 import os
+import re
 import sys
 import time
 
@@ -14,13 +15,22 @@ END_DATE = "2026-01-01"
 PRICES_DIR = "prices"
 SYMBOLS_FILE = "nasdaqlisted.txt"
 REQUEST_DELAY = 0.05
-MAX_RETRIES = 1
-PROGRESS_EVERY = 50
+MAX_RETRIES = 3
+PROGRESS_EVERY = 100
 FAILED_LOG = "failed_symbols.csv"
 
 COLUMNS = ["date", "open", "high", "low", "close", "adj_close", "volume"]
 
-def load_symbols(path, include_etfs=False):
+NON_EQUITY = re.compile(
+    r"\bETN\b|\bETF\b|Exchange[- ]Traded|"
+    r"\bWarrant|\bRight\b|\bRights\b|\bUnit\b|\bUnits\b|"
+    r"Depositary Share|Depositary Receipt|Preferred|"
+    r"Closed End Fund|Trust Preferred|Notes? due|\bDebenture",
+    re.I,
+)
+
+
+def load_symbols(path, common_stock_only=True):
     if not os.path.exists(path):
         sys.exit(
             f"No symbol list found at '{path}'.\n"
@@ -34,31 +44,38 @@ def load_symbols(path, include_etfs=False):
         # NASDAQ listing files are pipe-delimited with a Symbol column
         if "|" in first and "Symbol" in first:
             reader = csv.DictReader(f, delimiter="|")
-            symbols, dropped_test, dropped_etf = [], 0, 0
+            symbols = []
+            dropped = {"test": 0, "etf": 0, "non_equity": 0, "suffixed": 0}
 
             for row in reader:
                 symbol = (row.get("Symbol") or "").strip().upper()
+                name = row.get("Security Name") or ""
 
                 # Trailing footer line: "File Creation Time: ...|||||||"
                 if not symbol or symbol.startswith("FILE CREATION"):
                     continue
                 # Test tickers exist purely for exchange system checks
                 if row.get("Test Issue", "").strip().upper() == "Y":
-                    dropped_test += 1
+                    dropped["test"] += 1
                     continue
-                if not include_etfs and row.get("ETF", "").strip().upper() == "Y":
-                    dropped_etf += 1
+                if common_stock_only and row.get("ETF", "").strip().upper() == "Y":
+                    dropped["etf"] += 1
                     continue
-                # Suffixed symbols (warrants, preferred, classes) use different
-                # conventions on Yahoo and mostly 404 — skip them
+                if common_stock_only and NON_EQUITY.search(name):
+                    dropped["non_equity"] += 1
+                    continue
+                # Suffixed symbols use different conventions on Yahoo and mostly 404
                 if not symbol.isalpha():
+                    dropped["suffixed"] += 1
                     continue
 
                 symbols.append(symbol)
 
             print(
-                f"Parsed NASDAQ listing: {len(symbols)} symbols "
-                f"({dropped_test} test issues, {dropped_etf} ETFs excluded)"
+                f"Parsed NASDAQ listing: {len(symbols):,} symbols "
+                f"({dropped['test']} test issues, {dropped['etf']} ETFs, "
+                f"{dropped['non_equity']} non-equity instruments, "
+                f"{dropped['suffixed']} suffixed tickers excluded)"
             )
             return symbols
 
@@ -68,6 +85,7 @@ def load_symbols(path, include_etfs=False):
             for line in f
             if line.strip() and not line.startswith("#")
         ]
+
 
 def fetch_symbol(symbol, start, end, retry_empty=False):
     for attempt in range(1, MAX_RETRIES + 1):
@@ -89,7 +107,9 @@ def fetch_symbol(symbol, start, end, retry_empty=False):
         time.sleep(2 ** attempt)
     return None, "no data returned"
 
+
 def write_csv(symbol, df, out_dir):
+    """Write the DataFrame to <out_dir>/<symbol>.csv in the target schema."""
     path = os.path.join(out_dir, f"{symbol}.csv")
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -106,28 +126,31 @@ def write_csv(symbol, df, out_dir):
             ])
     return path
 
+
 def main():
     parser = argparse.ArgumentParser(description="Download NASDAQ daily prices.")
-    parser.add_argument("--symbols", nargs="+", help="Tickers to fetch (overrides symbols.txt)")
+    parser.add_argument("--symbols", nargs="+", help="Tickers to fetch (overrides the symbol file)")
     parser.add_argument("--start", default=START_DATE, help="Start date, YYYY-MM-DD")
     parser.add_argument("--end", default=END_DATE, help="End date, YYYY-MM-DD")
     parser.add_argument("--out", default=PRICES_DIR, help="Output directory")
     parser.add_argument("--force", action="store_true", help="Re-download existing files")
     parser.add_argument("--symbol-file", default=SYMBOLS_FILE, help="Plain list or nasdaqlisted.txt")
-    parser.add_argument("--include-etfs", action="store_true", help="Keep ETFs from a NASDAQ listing")
+    parser.add_argument("--all-instruments", action="store_true",
+                        help="Keep ETFs, ETNs, warrants and other non-equity listings")
     parser.add_argument("--limit", type=int, help="Only fetch the first N symbols")
     parser.add_argument("--verbose", action="store_true", help="Print a line per symbol")
-    parser.add_argument("--retry-empty", action="store_true", help="Retry empty results (distinguishes throttling from delisting)")
+    parser.add_argument("--retry-empty", action="store_true",
+                        help="Retry empty results (distinguishes throttling from delisting)")
     parser.add_argument("--delay", type=float, default=REQUEST_DELAY, help="Seconds between requests")
     args = parser.parse_args()
 
-    symbols = args.symbols or load_symbols(args.symbol_file, args.include_etfs)
+    symbols = args.symbols or load_symbols(args.symbol_file, not args.all_instruments)
     symbols = [s.upper() for s in symbols]
     if args.limit:
         symbols = symbols[:args.limit]
     os.makedirs(args.out, exist_ok=True)
 
-    print(f"{len(symbols)} symbols | {args.start} to {args.end} | -> {args.out}/")
+    print(f"{len(symbols):,} symbols | {args.start} to {args.end} | -> {args.out}/")
 
     # Resume: anything already written is skipped unless --force
     pending = [
@@ -136,7 +159,10 @@ def main():
     ]
     skipped = len(symbols) - len(pending)
     if skipped:
-        print(f"{skipped} already downloaded, {len(pending)} to fetch")
+        print(f"{skipped:,} already downloaded, {len(pending):,} to fetch")
+    if not pending:
+        print("Nothing to do.")
+        return
     print()
 
     downloaded, failures = 0, []
@@ -168,7 +194,7 @@ def main():
         time.sleep(args.delay)
 
     elapsed = time.monotonic() - started
-    print(f"\nDone in {elapsed/60:.1f} min: {downloaded:,} downloaded, "
+    print(f"\nDone in {elapsed / 60:.1f} min: {downloaded:,} downloaded, "
           f"{skipped:,} already present, {len(failures):,} failed.")
 
     if failures:
@@ -177,13 +203,14 @@ def main():
             writer.writerow(["symbol", "reason"])
             writer.writerows(failures)
 
-        share = len(failures) / max(len(pending), 1)
+        share = len(failures) / len(pending)
         print(f"Failure detail written to {FAILED_LOG} ({share:.0%} of attempted).")
-        print("Symbols listed in nasdaqlisted.txt as of 2017 may since have been "
-              "delisted, acquired or renamed. Note that Yahoo also returns an "
-              "empty result when rate limiting, so a high failure rate at a low "
-              "--delay may not all be genuine: re-run a sample with "
-              "--retry-empty --delay 1.0 to check.")
+        print("Symbols listed in nasdaqlisted.txt as of April 2017 may since have "
+              "been delisted, acquired or renamed. Yahoo also returns an empty "
+              "result when rate limiting, so a high failure rate at a low --delay "
+              "may not all be genuine: re-run a sample with --retry-empty "
+              "--delay 1.0 to check.")
+
 
 if __name__ == "__main__":
     main()
