@@ -63,6 +63,17 @@ Also handles unknown file encoding via `chardet` at load time.
 
 ---
 
+### `Python - Evaluating Numerical Expressions`
+A calculator built from the data structure up. `evaluate("10 + 3 * 5 / ( 16 - 4 )")` returns the right answer without calling `eval()`, by doing the work a language parser does before any arithmetic happens.
+
+Two stages, both running on a `Stack` implemented over a doubly-linked list. `infix_to_postfix()` applies **Dijkstra's shunting-yard algorithm** to reorder an expression into postfix, where precedence and parentheses are encoded in the sequence itself; `evaluate_postfix()` then consumes it in a single O(n) pass. The `prev` pointer on each node is what keeps `pop()` at O(1), since removing the tail otherwise means an O(n) traversal from the head.
+
+The write-up covers where the implementation diverges from Python: it does not track operator associativity, so `2 ** 3 ** 2` evaluates left to right and gives 64 where Python gives 512.
+
+**Libraries:** none
+
+---
+
 ### `SQL - Stores Database`
 A SQL-only analysis of a scale-model retailer's sales database. Documents the schema and its relationships, profiles table sizes via `PRAGMA_TABLE_INFO`, then answers three commercial questions using CTEs, a created view and correlated subqueries:
 
