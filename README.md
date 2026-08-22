@@ -17,6 +17,19 @@ Nineteen years of daily NASDAQ prices (1,363 tickers, 5.4 million ticker-days) d
 
 ---
 
+### `Python - Simulating DNA Sequencing Reads`
+A simulated sequencing run, the quality-control check that follows it, and a power calculation establishing what that check can actually detect.
+
+Generates random DNA fragments with their complementary strands, then measures base composition across the run, the diagnostic real QC tools report: an unbiased library should show 25% of each base at every cycle, and systematic deviation points to a problem in library preparation. A **chi-square goodness-of-fit test** gives p = 0.101, no evidence against uniformity.
+
+That result tests the code rather than discovering anything, so the final section inverts the question. Introducing a deliberate GC bias and simulating thousands of runs across a grid of read depths gives the detection power of the check: **80% power needs 2,500 bases for a 5-point bias, 50,000 for a 1-point bias, and a half-point bias is not reliably detected at all.** Sensitivity scales as 1/d², which is what makes small systematic biases expensive to rule out and easy to miss.
+
+The practical consequence is that "no evidence of bias" is only meaningful relative to a stated detection floor. At the depth used earlier, the check would have caught a 1-point bias roughly 44% of the time.
+
+**Libraries:** `pandas`, `numpy`, `scipy`, `matplotlib`, `random`
+
+---
+
 ### `Python - Analysing Wikipedia Pages`
 A map/reduce framework built from scratch over a **961 MB subset of ~6,600 Wikipedia articles**, using `multiprocessing` to parallelise work across CPU cores and benchmarked against a single-process baseline.
 
